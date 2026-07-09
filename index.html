@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARRESSAI</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://player.vimeo.com/api/player.js"></script>
+</head>
+<body>
+
+  <!-- TOP RIGHT LOGO -->
+  <header class="site-header">
+    <div class="logo-wrap">
+      <!-- Replace src with your logo image -->
+      <img src="arressai-logo.png" alt="ARRESAI Logo" class="logo-img" id="site-logo" />
+      <!-- Fallback text logo if no image -->
+      <span class="logo-text-fallback">ARRESAI</span>
+    </div>
+  </header>
+
+  <!-- MAIN LAYOUT -->
+  <main class="main-layout">
+
+    <!-- LEFT COLUMN: Year Nav + Calendar Numbers -->
+    <aside class="left-col">
+
+      <!-- <div class="calendar-numbers">
+        <p>1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17</p>
+        <p>18 19 20 21 22 23 24 25 26 27 28 29 30 31</p>
+        <p>1 2 3 4 5 6 7 8 9 10 11 12</p>
+      </div> -->
+
+      <nav class="year-nav">
+        <div class="artist-bio">Katie Cline (ARRESSAI) is a multi-media sound and installation artist working across spatial audio, physical computing, and research-based practice.</div>
+        <a href="#y2026" class="year-link active">2026</a>
+        <a href="#y2025" class="year-link">2025</a>
+        <a href="#y2024" class="year-link">2024</a>
+        <a href="#y2023" class="year-link">2023</a>
+        <a href="#y2022" class="year-link">2022</a>
+        <a href="#y2021" class="year-link">2021</a>
+        <a href="#y2020" class="year-link">2020</a>
+        <a href="#y2019" class="year-link">2019</a>
+        <a href="#y2018" class="year-link">2018</a>
+        <a href="#video-works" class="year-link">VIDEO</a>
+      </nav>
+
+      <a href="#all" class="all-link">ALL</a>
+
+    </aside>
+
+    <!-- CENTER COLUMN: Content Panels -->
+    <section class="content-col">
+
+      <!-- UPCOMING -->
+      <div class="year-block" id="upcoming">
+        <div class="year-label">UPCOMING</div>
+        <div class="entries">
+          <div class="entry">
+            <div class="entry-title no-caps"><span class="entry-title-italic">seaSonic3000</span><br> <br>SONY AUDIO INSTITUTE, APRIL 16TH
+              <span class="entry-location"><br>360 JAY STREET
+              <br>BROOKLYN, NEW YORK <BR> 11201, USA</span>
+            </div>
+            <div class="entry-title">TISCH SCHOOL OF THE ARTS, <BR> IMA LOW RESIDENCY,<br> <br>SUMMER EXHIBIT, JUNE 2026
+              <span class="entry-location"><br>西岸艺术中心A馆龙腾大道 2555 号
+              <br>West Bund Art Center Hall A2555 Longteng Ave, Shanghai</span>
+            </div>
+            <div class="entry-meta"><!-- Add details --></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CURRENT -->
+      <div class="year-block" id="current">
+        <div class="year-label">CURRENT</div>
+        <div class="entries">
+          <div class="entry">
+            <div class="entry-title">IMA RESIDENCY MASTERS @ TISCH, NYU</div>
+            <div class="entry-meta"><!-- Add details --></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2026 -->
+      <div class="year-block" id="y2026">
+        <div class="year-label">2026</div>
+        <div class="entries">
+          <div class="entry">
+            <div class="entry-title" data-panel-target="fever-dream-panel">"FEVER DREAM" FRIDAY GALLERY,<span class="entry-location"> Los Angeles, FEBRUARY 28th</span></div>
+            <div class="entry-meta"></div>
+          </div>
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="berlin-panel">IMA WINTER EXHIBITION,<span class="entry-location"> Berlin,  January 17th</span></div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="berlin-panel" aria-hidden="true">
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__pair">
+                    <div class="techno-box-panel__item">
+                      <img src="a-woman-2.png" alt="A Woman 2" class="techno-box-panel__image techno-box-panel__image--small" />
+                    </div>
+                    <div class="techno-box-panel__item">
+                      <img src="a-woman-3.png" alt="A Woman 3" class="techno-box-panel__image techno-box-panel__image--small" />
+                    </div>
+                  </div>
+                  <div class="techno-box-panel__spacer"></div>
+                  <img src="a-woman-saying-no.png" alt="A Woman Saying No" class="techno-box-panel__image" />
+                  <div class="techno-box-panel__spacer"></div>
+                  <div class="techno-box-panel__title">IMA WINTER EXHIBITION</div>
+                  <div class="techno-box-panel__details">
+                    <div>Berlin, January 17th</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2025 -->
+      <div class="year-block" id="y2025">
+        <div class="year-label">2025</div>
+        <div class="entries">
+          <div class="entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="bass-bath-panel">"bassbatH" tera house,<span class="entry-location"> Joshua tree, january 8th</span></div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="bass-bath-panel" aria-hidden="true">
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__stack">
+                    <img src="bassbath-web-2.png" alt="Bass Bath artwork view 1" class="techno-box-panel__image techno-box-panel__image--stack" />
+                    <div class="techno-box-panel__item">
+                      <img src="bassbath-web.png" alt="Bass Bath artwork view 2" class="techno-box-panel__image techno-box-panel__image--stack" />
+                      <div class="techno-box-panel__title">BASS BATH</div>
+                      <div class="techno-box-panel__details">
+                        <div>Tera House</div>
+                        <div>Joshua Tree, California</div>
+                        <div>Audio installation and performance work.</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="audio-player" data-audio-player>
+                    <button class="audio-player__control" type="button" aria-label="Play" data-audio-toggle>
+                      ▶
+                    </button>
+                    <div class="audio-player__track" data-audio-track>
+                      <div class="audio-player__progress" data-audio-progress></div>
+                    </div>
+                    <span class="audio-player__time" data-audio-time>0:00</span>
+                    <audio class="audio-player__media" preload="none">
+                      <source src="bassBath-web.mp3" type="audio/mpeg" />
+                    </audio>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-title">IMA SUMMER EXHIBITION,<span class="entry-location"> New York, AUGUST 13TH  </span></div>
+            <div class="entry-meta"></div>
+          </div>
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="adms-panel">ADMS GUEST SPEAKER, <span class="entry-location"> Austin, june 2nd  </span></div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="adms-panel" aria-hidden="true">
+                <img src="adms.JPG" alt="ADMS Guest Speaker" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">ADMS GUEST SPEAKER</div>
+                  <div class="techno-box-panel__details">
+                    <div>Austin Dance Music Summit</div>
+                    <div>Austin, June 2nd</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="seasonic-panel">ITP WINTER EXHIBITION, <br><span class="entry-note">(ITP GRANT RECIPIENT)</span><span class="entry-location"> New York, DECEMBER 14TH - 15TH </span></div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="seasonic-panel" aria-hidden="true">
+                <img src="seaSonic3000.png" alt="seaSonic3000 artwork" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">SEASONIC3000</div>
+                  <div class="techno-box-panel__details">
+                    <div>Interactive web-based experience and physical work exploring AI</div>
+                    <div>and deep sea animal senses.</div>
+                  </div>
+                  <div class="audio-player" data-audio-player>
+                    <button class="audio-player__control" type="button" aria-label="Play" data-audio-toggle>
+                      ▶
+                    </button>
+                    <div class="audio-player__track" data-audio-track>
+                      <div class="audio-player__progress" data-audio-progress></div>
+                    </div>
+                    <span class="audio-player__time" data-audio-time>0:00</span>
+                    <audio class="audio-player__media" preload="none">
+                      <source src="underDaSea-rd-web.mp3" type="audio/mpeg" />
+                    </audio>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="lording-panel">LORDING</div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="lording-panel" aria-hidden="true">
+                <img src="lording-lamb.png" alt="Lording" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">LORDING</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="immer-panel">"IMMER" SALT TOWER, <BR> <span class="entry-location">Los Angeles, JUNE 28TH - 29TH</span></div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="immer-panel" aria-hidden="true">
+                <img src="immer.png" alt="Immer Salt Tower" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">IMMER</div>
+                  <div class="techno-box-panel__details">
+                    <div>Salt Tower, Los Angeles</div>
+                    <div>June 28th – 29th, 2025</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2024 -->
+      <div class="year-block" id="y2024">
+        <div class="year-label">2024</div>
+        <div class="entries">
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="saguaro-2024-panel">APRIL SAGUARO HOTEL PARTNERSHIP</div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="saguaro-2024-panel" aria-hidden="true">
+                <img src="saguaro-two.png" alt="Saguaro Hotel Partnership 2024" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">SAGUARO HOTEL PARTNERSHIP</div>
+                  <div class="techno-box-panel__details">
+                    <div>April 2024</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-title">JUNE/JULY GRACIE JIU JITSU PARTNERSHIP</div>
+            <div class="entry-meta"></div>
+          </div>
+          <div class="entry">
+            <div class="entry-title">DECEMBER ADMS GUEST SPEAKER</div>
+            <div class="entry-meta"></div>
+          </div>
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="dreamscapes-panel">DREAMSCAPES</div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="dreamscapes-panel" aria-hidden="true">
+                <img src="dreamscape-four.png" alt="Dreamscapes" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">DREAMSCAPES</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2023 -->
+      <div class="year-block" id="y2023">
+        <div class="year-label">2023</div>
+        <div class="entries">
+          <div class="entry">
+            <div class="entry-title">APRIL SAGUARO HOTEL PARTNERSHIP</div>
+            <div class="entry-meta"></div>
+          </div>
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="major-moon-panel">JANUARY MAJOR MOON PRIVATE PIECE</div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="major-moon-panel" aria-hidden="true">
+                <img src="major-moon.png" alt="Major Moon Private Piece" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">MAJOR MOON</div>
+                  <div class="techno-box-panel__details">
+                    <div>Private Piece, January 2023</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2022 -->
+      <div class="year-block" id="y2022">
+        <div class="year-label">2022</div>
+        <div class="entries">
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="saguaro-panel">SAGUARO HOTEL PARTNERSHIP</div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="saguaro-panel" aria-hidden="true">
+                <img src="saguaro-one.png" alt="Saguaro Hotel Partnership" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">SAGUARO HOTEL PARTNERSHIP</div>
+                  <div class="techno-box-panel__details">
+                    <div>Palm Springs, 2022</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="entry-meta">
+              January
+              <div class="techno-box-panel" id="darkness-panel" aria-hidden="true">
+                <img src="her-two.png" alt="And The Darkness Burned Away artwork" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">"AND THE DARKNESS BURNED AWAY"</div>
+                  <div class="techno-box-panel__details">
+                    <div>Group Show</div>
+                  </div>
+                  <div class="vimeo-embed">
+                    <div style="padding:56.25% 0 0 0;position:relative;">
+                      <iframe src="https://player.vimeo.com/video/1121731717?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Inner World of a Woman"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="sound-garden-panel">SOUND GARDEN GROUND FLOOR JUNCTION</div>
+            <div class="entry-meta">
+              July
+              <div class="techno-box-panel" id="sound-garden-panel" aria-hidden="true">
+                <img src="sound-garden.png" alt="Sound Garden Ground Floor Junction" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">SOUND GARDEN</div>
+                  <div class="techno-box-panel__details">
+                    <div>Ground Floor Junction</div>
+                    <div>July 2022</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="nusi-quero-panel">NUSI QUERO COLLABORATION</div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="nusi-quero-panel" aria-hidden="true">
+                <img src="nusi_quero.png" alt="Nusi Quero Collaboration" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">NUSI QUERO COLLABORATION</div>
+                  <div class="techno-box-panel__details">
+                    <div>2022</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="arrival-window-panel">MINNOW ARTS "ARRIVAL WINDOW" GROUP SHOW</div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="arrival-window-panel" aria-hidden="true">
+                <img src="arrival-window-6.png" alt="Arrival Window artwork" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">ARRIVAL WINDOW</div>
+                  <div class="techno-box-panel__details">
+                    <div>Minnow Arts Group Show</div>
+                  </div>
+                  <div class="audio-player" data-audio-player>
+                    <button class="audio-player__control" type="button" aria-label="Play" data-audio-toggle>
+                      ▶
+                    </button>
+                    <div class="audio-player__track" data-audio-track>
+                      <div class="audio-player__progress" data-audio-progress></div>
+                    </div>
+                    <span class="audio-player__time" data-audio-time>0:00</span>
+                    <audio class="audio-player__media" preload="none">
+                      <source src="day6_arrivalWindowaudio.wav" type="audio/wav" />
+                    </audio>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2021 -->
+      <div class="year-block" id="y2021">
+        <div class="year-label">2021</div>
+        <div class="entries">
+          <div class="entry techno-box-entry">
+            <div class="entry-title-wrap">
+              <div class="entry-title techno-box-trigger" data-panel-target="her-hips-panel">"AND THE DARKNESS BURNED AWAY" GROUP SHOW</div>
+            </div>
+            <div class="entry-meta">December</div>
+            <div class="techno-box-panel" id="her-hips-panel" aria-hidden="true">
+              <img src="her-hips.png" alt="Her Hips artwork" class="techno-box-panel__image" />
+              <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">HER</div>
+                <div class="techno-box-panel__details">
+                  <div>63 × 43 × 13 cm &nbsp;&nbsp; 25 × 17 × 5.1 in</div>
+                  <div>COAL SLAG, GLASS, ARGON, AUDIO, THE ARTIST'S CLOTHING</div>
+                  <div>IMMERSIVE SONIC INSTALLATION</div>
+                </div>
+                <div class="techno-box-panel__spacer"></div>
+                <div class="techno-box-panel__details">
+                  <div>SHE</div>
+                  <div>00:10:10 ORIGINAL SONIC PIECE</div>
+                  <div>00:10:10 GUIDED SONIC MEDITATION</div>
+                </div>
+                <div class="techno-box-panel__spacer"></div>
+                <div class="techno-box-panel__details">
+                  <div>HER — IMMERSIVE SCENT</div>
+                  <div>MYRRH, LAVENDER, NEROLI, CEDARWOOD, OAKMOSS, OLIBANUM, PATCHOULI, VETIVER</div>
+                </div>
+                <div class="techno-box-panel__spacer"></div>
+                <div class="techno-box-panel__details">
+                  <div>"AND THE DARKNESS BURNED AWAY"</div>
+                  <div>SAUNTER HOME WELLNESS CLUB | JOSHUA TREE, CA</div>
+                  <div>December 8th, 2021 – January 4th, 2022</div>
+                </div>
+                <div class="techno-box-panel__spacer"></div>
+                <div class="techno-box-panel__details">
+                  <div>JAMES HAUNT, VERONICA GABRIEL-LABARRIE, DAVID IRWIN, HILARY SLOANE, SALVADOR</div>
+                  <div>Video courtesy of Brian Gonzalez</div>
+                </div>
+                <div class="techno-box-panel__spacer"></div>
+                <div class="white-rock-statement">
+                  <p>FROM ASH I BLOOM is an immersive sonic experience that explores the concept of emergence through stillness and activation of the power of femininity. Focus is illuminated through the light sculpture at the center of the room where argon light outlines a form reminiscent of a woman's hips. The work comments on the birth / rebirth life cycle, and offers a meditative initiation into a series of immersive sonic activations for attendees.</p>
+                  <p>Drawing on visuals from an other-world, the artist uses activations as a method of transportation for healing story telling, and experiential revelation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2020 -->
+      <div class="year-block" id="y2020">
+        <div class="year-label">2020</div>
+        <div class="entries">
+          <div class="entry">
+            <div class="entry-title">FE1</div>
+            <div class="entry-meta"></div>
+          </div>
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="white-rock-panel">WHITE ROCK SERIES</div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="white-rock-panel" aria-hidden="true">
+                <div class="techno-box-panel__caption">
+
+                  <!-- TWO IMAGES SIDE BY SIDE -->
+                  <div class="techno-box-panel__pair">
+                    <div class="techno-box-panel__item">
+                      <img src="white-rock-series.jpg" alt="White Rock Series" class="techno-box-panel__image techno-box-panel__image--small" />
+                    </div>
+                    <div class="techno-box-panel__item">
+                      <img src="white-rock-seriess-lew.png" alt="White Rock Series — LEW" class="techno-box-panel__image techno-box-panel__image--small" />
+                    </div>
+                  </div>
+
+                  <!-- ARTWORK ENTRIES -->
+                  <div class="techno-box-panel__title">LEW</div>
+                  <div class="techno-box-panel__details">
+                    <div>20 × 16.5 in &nbsp;&nbsp;&nbsp; 50.8 × 41.9 cm</div>
+                    <div>OIL PAINT ON PANEL, HORSE HAIR, NICKEL, SILVER THREAD, STAINLESS STEEL NOSE RINGS</div>
+                  </div>
+
+                  <div class="techno-box-panel__spacer"></div>
+
+                  <div class="techno-box-panel__title">HELLO / THE EYE OF A HORSE</div>
+                  <div class="techno-box-panel__details">
+                    <div>16.5 × 20 in &nbsp;&nbsp;&nbsp; 41.9 × 50.8 cm</div>
+                    <div>OIL PAINT ON PANEL, RESIN, HORSE TAIL, NICKEL BEAD AND CONE, SILVER THREAD</div>
+                  </div>
+
+                  <div class="techno-box-panel__spacer"></div>
+
+                  <div class="techno-box-panel__title">HORSE TV</div>
+                  <div class="techno-box-panel__details">
+                    <div>20 × 24 in &nbsp;&nbsp;&nbsp; 50.8 × 60.9 cm</div>
+                    <div>OIL PAINT ON CANVAS, HORSE HAIR, NICKEL BEAD AND CONE, SILVER THREAD</div>
+                  </div>
+
+                  <div class="techno-box-panel__spacer"></div>
+
+                  <div class="techno-box-panel__title">THE CENTER</div>
+                  <div class="techno-box-panel__details">
+                    <div>17 × 10.5 in &nbsp;&nbsp;&nbsp; 43.2 × 26.7 cm</div>
+                    <div>STEEL, HORSE TAIL, NICKEL CONCHO'S, SILVER THREAD, JINGLE CONE, NICKEL BEAD</div>
+                  </div>
+
+                  <div class="techno-box-panel__spacer"></div>
+
+                  <div class="techno-box-panel__title">SILENCE</div>
+                  <div class="techno-box-panel__details">
+                    <div>38.3 × 6.3 in &nbsp;&nbsp;&nbsp; 97.2 × 16 cm</div>
+                    <div>RESIN, HORSE HAIR, STEEL, NICKEL CONCHO, SILVER THREAD</div>
+                  </div>
+
+                  <div class="techno-box-panel__spacer"></div>
+
+                  <div class="techno-box-panel__title">WHOLE</div>
+                  <div class="techno-box-panel__details">
+                    <div>40 × 40 × 2 in &nbsp;&nbsp;&nbsp; 101.6 × 101.6 × 2 cm</div>
+                    <div>NEON, HAND POLISHED STEEL, TRANSFORMER</div>
+                  </div>
+
+                  <div class="techno-box-panel__spacer"></div>
+                  <div class="techno-box-panel__spacer"></div>
+
+                  <!-- SERIES STATEMENT -->
+                  <div class="white-rock-statement">
+                    <p>THIS SERIES WAS MADE OVER THE COURSE OF THREE MONTHS OF VOLUNTEER WORK BY THE ARTIST AT A LOCAL HORSE RESCUE DURING THE PANDEMIC. EACH PIECE REPRESENTS AN INTEGRAL LESSON TAKEN FROM THE EXPERIENCE.</p>
+                    <p>TIME IN PROXIMITY IS THE CATALYST FOR ALL UNDERSTANDING. BEING TIMID WON'T WORK, BE GENTLE INSTEAD.</p>
+                    <p>HOLD YOUR BOUNDARIES ENERGETICALLY AND BE CERTAIN AND HONEST IN THE MOMENT THEY ARE TRESPASSED.</p>
+                    <p>OBSERVE BEFORE INTERJECTION.</p>
+                    <p>IDEATION OF CATASTROPHE KEEPS THE MIND SEDATED FROM REAL DANGER AND ENERGY LOW.</p>
+                    <p>BE. SIMPLY BE. STARE INTO THE CENTER OF A FLOWER OR WATCH SOMETHING UNTIL YOU FORGET WHERE THE BOUNDARY LIES BETWEEN YOU AND WHAT YOU ARE WATCHING.. YOU WILL COME OUT REFRESHED.</p>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2019 -->
+      <div class="year-block" id="y2019">
+        <div class="year-label">2019</div>
+      </div>
+
+      <!-- 2018 -->
+      <div class="year-block" id="y2018">
+        <div class="year-label">2018</div>
+        <div class="entries">
+          <div class="entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="chrome-panel">"CHROME" GROUP SHOW</div>
+            <div class="entry-meta">
+              December
+              <div class="techno-box-panel" id="chrome-panel" aria-hidden="true">
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__pair">
+                    <div class="techno-box-panel__item">
+                      <img src="blood-box-web.png" alt="Blood Box / Spirit Vein artwork" class="techno-box-panel__image techno-box-panel__image--small" />
+                      <div class="techno-box-panel__title">BLOOD BOX / SPIRIT VEIN</div>
+                      <div class="techno-box-panel__details">
+                        <div>17 x 15.5 x 13 cm</div>
+                        <div>6.7 x 6.1 x 5.1 in</div>
+                        <div>GLASS, STEEL, NEON, PLEXI, EPOXY, 400ML ARTIST’S BLOOD</div>
+                      </div>
+                    </div>
+                    <div class="techno-box-panel__item">
+                      <img src="tumor-all-page.png" alt="The Most Pertinent Tumor artwork" class="techno-box-panel__image techno-box-panel__image--small" />
+                      <div class="techno-box-panel__title">THE MOST PERTINENT TUMOR</div>
+                      <div class="techno-box-panel__details">
+                        <div>63 x 43 x 13 cm</div>
+                        <div>25 x 17 x 5.1 in</div>
+                        <div>CLAY, CIGARETTES, PLASTIC, ROPE, CONTACT MICROPHONES</div>
+                        <div>INTERACTIVE SOUND INSTALLATION</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="audio-player" data-audio-player>
+                    <button class="audio-player__control" type="button" aria-label="Play" data-audio-toggle>
+                      ▶
+                    </button>
+                    <div class="audio-player__track" data-audio-track>
+                      <div class="audio-player__progress" data-audio-progress></div>
+                    </div>
+                    <span class="audio-player__time" data-audio-time>0:00</span>
+                    <audio class="audio-player__media" preload="none">
+                      <source src="chrome-audio.mp3" type="audio/mpeg" />
+                    </audio>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="dissemination-panel">"HERE" GROUP SHOW</div>
+            <div class="entry-meta">
+              September
+              <div class="techno-box-panel" id="dissemination-panel" aria-hidden="true">
+                <img src="diseemination_web.png" alt="Dissemination I and II artwork" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">DISSEMINATION I</div>
+                  <div class="techno-box-panel__details">
+                    <div>45.2 x 27.9 x 10.7 cm</div>
+                    <div>17.8 x 11 x 4.2 in</div>
+                    <div>ACRYLIC, HYDRO-BEADS, STEEL, MISTING SYSTEM.</div>
+                  </div>
+                  <div class="techno-box-panel__spacer"></div>
+                  <div class="techno-box-panel__title">DISSEMINATION II</div>
+                  <div class="techno-box-panel__details">
+                    <div>45.2 x 27.9 x 10.7 cm</div>
+                    <div>17.8 x 11 x 4.2 in</div>
+                    <div>ACRYLIC, HYDRO-BEADS, STEEL, MISTING SYSTEM.</div>
+                  </div>
+                  <div class="audio-player" data-audio-player>
+                    <button class="audio-player__control" type="button" aria-label="Play" data-audio-toggle>
+                      ▶
+                    </button>
+                    <div class="audio-player__track" data-audio-track>
+                      <div class="audio-player__progress" data-audio-progress></div>
+                    </div>
+                    <span class="audio-player__time" data-audio-time>0:00</span>
+                    <audio class="audio-player__media" preload="none">
+                      <source src="dissemination-audio.mp3" type="audio/mpeg" />
+                    </audio>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="impact-panel">MOMENT OF IMPACT</div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="impact-panel" aria-hidden="true">
+                <img src="impact.png" alt="Moment of Impact artwork" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">IMPACT</div>
+                  <div class="techno-box-panel__details">
+                    <div>42 x 33.7 cm</div>
+                    <div>16.5 x 13.25 in</div>
+                    <div>WAX, CARD BOARD, FRAME, VARNISH</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="techno-box-art-panel">TECHNO BOX</div>
+            <div class="entry-meta">
+              <div class="techno-box-panel" id="techno-box-art-panel" aria-hidden="true">
+                <img src="techno-box-03_V2.png" alt="Techno Box artwork" class="techno-box-panel__image" />
+                <div class="techno-box-panel__caption">
+                  <div class="techno-box-panel__title">TECHNO BOX</div>
+                  <div class="techno-box-panel__details">
+                    <div>42 x 33.7 cm</div>
+                    <div>16.5 x 13.25 in</div>
+                    <div>STEEL, NEON, WOOD, BLACK ONYX, TOURMALINE, .925 SILVER, RESIN, RECYCLED GLASS, ACRYLIC PAINT, TRANSFORMER</div>
+                  </div>
+                  <div class="audio-player" data-audio-player>
+                    <button class="audio-player__control" type="button" aria-label="Play" data-audio-toggle>
+                      ▶
+                    </button>
+                    <div class="audio-player__track" data-audio-track>
+                      <div class="audio-player__progress" data-audio-progress></div>
+                    </div>
+                    <span class="audio-player__time" data-audio-time>0:00</span>
+                    <audio class="audio-player__media" preload="none">
+                      <source src="techno-box-audio.mp3" type="audio/mpeg" />
+                    </audio>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO WORKS -->
+      <div class="year-block" id="video-works">
+        <div class="year-label">VIDEO WORKS</div>
+        <div class="entries">
+          <div class="entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="techno-box-video-panel">TECHNO BOX</div>
+            <div class="entry-meta"></div>
+          </div>
+          <div class="entry techno-box-entry">
+            <div class="entry-title techno-box-trigger" data-panel-target="lording-panel">LORDING</div>
+            <div class="entry-meta"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="video-panels">
+  <div class="video-panel" id="techno-box-video-panel" aria-hidden="true">
+          <div class="video-panel__frame">
+            <iframe 
+              width="400" height="225"
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+              title="Techno Box"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <div class="video-panel" id="hand-with-beads-panel" aria-hidden="true">
+          <div class="video-panel__frame">
+            <iframe 
+              width="400" height="225"
+              src="https://www.youtube.com/embed/VIDEO_ID_HERE"
+              title="The Hand with Beads"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <div class="video-panel" id="fever-dream-panel" aria-hidden="true">
+          <div class="video-panel__frame">
+            <video class="video-panel__video video-panel__video--portrait" controls preload="metadata" poster="media/fever-dream-poster-2s.jpg">
+              <source src="media/fever-dream-video-1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <div class="video-panel__details">
+               <div class="video-panel__credit">video courtesy of Mitch Jafery</div>
+              <div class="video-panel__title"> Roberto Benavidez, Florine Démosthène, Larissa De Jesús Negrón, Anindita Dutta, Diego Moreno, Pedro Troncoso <br><br/> SONIC SALON BY ARRESSAI <br> </div>
+              <br> <div class="video-panel__meta">Curated by Mitch and Mubarak Jafery and Aurora Projects with support from dublab</div>
+               
+          
+                  
+                   <div> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ALL SECTION -->
+      <div class="year-block all-section" id="all">
+        <div class="year-label">ALL</div>
+        <div class="all-entries">
+          <!-- Dynamically populated by JS -->
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- BOTTOM RIGHT: Horse Video (transparent background) -->
+  <div class="horse-video-wrap">
+    <!-- 
+      Use a .webm with alpha channel for true transparency.
+      Replace horse-video.webm with your actual transparent video file.
+    -->
+    <video 
+      id="horse-video"
+      autoplay 
+      loop 
+      muted 
+      playsinline
+      class="horse-video">
+      <source src="horse-video.webm" type="video/webm" />
+      <!-- Fallback: static image placeholder -->
+      <img src="horse-placeholder.png" alt="Horse" />
+    </video>
+  </div>
+
+  <!-- ALL detail overlay (populated via script.js) -->
+  <div class="all-detail-overlay" id="allDetailOverlay" aria-hidden="true">
+    <div class="all-detail" role="dialog" aria-modal="true" aria-label="Project details">
+      <button class="all-detail__close" id="allDetailClose" aria-label="Close">✕</button>
+      <div class="all-detail__media" id="allDetailMedia"></div>
+      <div class="all-detail__title" id="allDetailTitle"></div>
+      <div class="all-detail__subtitle" id="allDetailSubtitle"></div>
+      <div class="all-detail__desc" id="allDetailDesc"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

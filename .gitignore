@@ -1,0 +1,26 @@
+# macOS
+.DS_Store
+
+# Node (if you add tooling later)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# VS Code
+.vscode/
+
+# Build / temp
+dist/
+build/
+*.log
+
+# Media caches
+*.webp
+*.DS_Store
+
+# OS files
+Thumbs.db
+
+# Optional: local env files
+.env
+day6_arrivalWindowaudio.wav

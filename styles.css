@@ -1,0 +1,796 @@
+/* ============================================================
+   ARRESAI — styles.css
+   Editable: fonts, colors, spacing, letter-spacing (kerning)
+   ============================================================ */
+
+/* ---------- RESET & BASE ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: #111111;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* ---------- TYPOGRAPHY / KERNING ----------
+   Adjust letter-spacing values below to control kerning 
+   --------------------------------------------------- */
+
+/* Navigation year links */
+.year-link {
+  letter-spacing: 0.18em;   /* ← KERNING: year nav */
+}
+
+/* Section year labels (2025, 2024…) */
+.year-label {
+  letter-spacing: 0.22em;   /* ← KERNING: year labels */
+}
+
+/* Entry titles */
+.entry-title {
+  letter-spacing: 0.20em;   /* ← KERNING: work titles */
+}
+
+/* Entry meta / supporting text */
+.entry-meta {
+  letter-spacing: 0.08em;   /* ← KERNING: meta text */
+}
+
+/* Calendar numbers */
+.calendar-numbers p {
+  letter-spacing: 0.06em;   /* ← KERNING: calendar numbers */
+}
+
+/* ALL link */
+.all-link {
+  letter-spacing: 0.30em;   /* ← KERNING: ALL */
+}
+
+/* Logo text fallback */
+.logo-text-fallback {
+  letter-spacing: 0.15em;   /* ← KERNING: logo text */
+}
+
+
+/* ---------- TEXT EFFECTS ---------- */
+
+/* Title hover effect: subtle lift + fade */
+.entry-title {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  display: inline-block;
+}
+.entry-title:hover {
+  opacity: 0.45;
+  transform: translateX(4px);
+}
+
+/* Year label: light gray with glyph effect on hover */
+.year-label {
+  color: #111;
+  transition: color 0.2s ease;
+}
+.year-block:hover > .year-label {
+  color: #aaaaaa;
+}
+
+/* Active / highlighted entry title */
+.entry-title.active {
+  color: #aaaaaa;         /* grayed-out "active" state like wireframe */
+}
+
+/* Year nav links */
+.year-link {
+  display: block;
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 400;
+  padding: 2px 0;
+  transition: color 0.2s ease, letter-spacing 0.2s ease;
+}
+.year-link:hover,
+.year-link.active {
+  color: #aaaaaa;
+}
+
+/* ALL link */
+.all-link {
+  display: block;
+  margin-top: 18px;
+  color: #111;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 400;
+  transition: color 0.2s ease;
+}
+.all-link:hover {
+  color: #aaaaaa;
+}
+
+
+/* ---------- HEADER ---------- */
+.site-header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  padding: 20px 32px;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  max-height: 48px;        /* ← Adjust logo size here */
+  width: auto;
+  display: block;
+}
+
+/* Hide fallback text if image loads */
+.logo-img:not([src="logo-placeholder.png"]) + .logo-text-fallback,
+.logo-img[src] + .logo-text-fallback {
+  display: none;
+}
+
+.logo-text-fallback {
+  font-size: 22px;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #111;
+}
+
+
+/* ---------- MAIN LAYOUT ---------- */
+.main-layout {
+  display: flex;
+  padding-top: 80px;       /* clear fixed header */
+  min-height: 100vh;
+  padding-bottom: 200px;   /* space for horse video */
+}
+
+
+/* ---------- LEFT COLUMN ---------- */
+.left-col {
+  width: 160px;
+  min-width: 140px;
+  padding: 32px 16px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: sticky;
+  top: 80px;
+  align-self: flex-start;
+  height: calc(100vh - 80px);
+  overflow-y: auto;
+}
+
+.calendar-numbers {
+  margin-bottom: 28px;
+}
+
+.calendar-numbers p {
+  font-size: 10px;
+  color: #bbb;
+  line-height: 1.8;
+}
+
+.artist-bio {
+  font-size: 10px;
+  color: #888;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  margin-bottom: 20px;
+  text-align: center;
+  max-width: 120px;
+}
+
+.year-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+
+/* ---------- CONTENT COLUMN ---------- */
+.content-col {
+  flex: 1;
+  padding: 32px 40px 32px 32px;
+  max-width: 680px;
+}
+
+.content-col.is-centered {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content-col.is-centered .year-block {
+  margin-bottom: 0;
+}
+
+.year-block {
+  margin-bottom: 48px;
+}
+
+.year-block.is-hidden {
+  display: none;
+}
+
+.year-label {
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  color: #111;
+}
+
+.entries {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+.entry.techno-box-entry {
+  grid-template-columns: 1fr;
+  align-items: start;
+  position: relative;
+}
+
+.entry-title {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #111;
+  cursor: default;
+}
+
+.techno-box-trigger {
+  cursor: pointer;
+}
+
+.entry-title-italic {
+  font-style: italic;
+}
+
+.no-caps {
+  text-transform: none;
+  
+}
+
+.entry-location {
+  display: inline-block;
+  font-size: 11px;
+  line-height: 1.6;
+  font-style: italic;
+  color: #888;
+  letter-spacing: 0.08em;
+}
+
+.entry-note {
+  font-size: 10px;
+  font-style: italic;
+  color: #111;
+  text-transform: none;
+  letter-spacing: 0.4em;
+}
+
+.entry-meta {
+  font-size: 11px;
+  color: #888;
+  line-height: 1.6;
+}
+
+.entry-video {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin-top: 8px;
+  border: 1px solid #eee;
+}
+
+/* ---------- TECHNO BOX PANEL ---------- */
+.techno-box-panel {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  position: fixed;
+  top: var(--media-panel-top, 58%);
+  left: 56%;
+  transform: translate(-50%, -50%);
+  width: min(80vw, 420px);
+  z-index: 120;
+}
+
+.techno-box-panel.is-visible {
+  display: flex;
+}
+
+.techno-box-panel__image {
+  width: 92%;
+  height: auto;
+  max-height: 65vh;
+  object-fit: contain;
+  display: block;
+}
+
+#dissemination-panel .techno-box-panel__image {
+  width: 98%;
+}
+
+#seasonic-panel .techno-box-panel__image,
+#seasonic-panel .audio-player {
+  width: 100%;
+}
+
+.techno-box-panel__title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.techno-box-panel__details {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #666;
+  line-height: 1.4;
+}
+
+.techno-box-panel__spacer {
+  height: 6px;
+}
+
+.vimeo-embed {
+  margin-top: 14px;
+  width: 100%;
+}
+
+.techno-box-panel__pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.techno-box-panel__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.techno-box-panel__image--small {
+  width: 100%;
+  max-height: 220px;
+}
+
+.techno-box-panel__stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.techno-box-panel__image--stack {
+  width: 100%;
+  max-height: 320px;
+}
+
+.audio-player {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 6px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #7fd3ff, #5aa9ff 55%, #2f6bdc);
+  color: #f6e4b7;
+  font-family: inherit;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.audio-player__control {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 1px solid #f6e4b7;
+  background: linear-gradient(135deg, #c6f0ff, #8ed7ff 60%, #6aaeff);
+  color: #f6e4b7;
+  font-size: 10px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 12px rgba(142, 215, 255, 0.95), 0 0 20px rgba(122, 164, 255, 0.65);
+}
+
+.audio-player__track {
+  position: relative;
+  height: 2px;
+  background: rgba(246, 228, 183, 0.35);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.audio-player__progress {
+  position: absolute;
+  inset: 0;
+  width: 0%;
+  background: #f0c36d;
+}
+
+.audio-player__time {
+  font-size: 9px;
+  color: #f6e4b7;
+}
+
+.audio-player__media {
+  display: none;
+}
+
+/* Image placeholder within entries */
+.entry-image-placeholder {
+  width: 100%;
+  aspect-ratio: 4/3;
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #bbb;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* Video embed */
+.video-embed-placeholder iframe {
+  display: block;
+  max-width: 100%;
+  margin-top: 8px;
+  border: none;
+}
+
+/* ---------- VIDEO PANELS ---------- */
+.video-panels {
+  position: fixed;
+  top: var(--media-panel-top, 58%);
+  left: 62%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+  z-index: 110;
+  pointer-events: none;
+}
+
+.video-panel {
+  display: none;
+  pointer-events: auto;
+}
+
+.video-panel.is-visible {
+  display: block;
+}
+
+.video-panel__frame iframe {
+  width: 460px;
+  height: 260px;
+  border: none;
+}
+
+.video-panel__video {
+  width: 460px;
+  height: 260px;
+  display: block;
+  background: #000;
+}
+
+.video-panel__video--portrait {
+  width: auto;
+  height: auto;
+  max-width: 360px;
+  max-height: 640px;
+  object-fit: contain;
+  background: transparent;
+}
+
+.video-panel__details {
+  margin-top: 10px;
+}
+
+.video-panel__title {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.video-panel__meta {
+  font-size: 11.5px;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+  color: #666;
+  line-height: 1.4;
+}
+
+.video-panel__credit {
+  font-style: italic;
+  font-size: 7px;
+  letter-spacing: 0.30em;
+  text-transform: uppercase;
+  color: #666;
+  line-height: 1.4;
+  margin: 8px 0 10px;
+}
+
+
+/* ---------- ALL SECTION — CARD GRID ---------- */
+.all-section .all-entries {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px 20px;
+}
+
+.all-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  cursor: default;
+  transition: opacity 0.25s ease;
+}
+.all-card:hover {
+  opacity: 0.55;
+}
+
+.all-card__img-wrap {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f0f0f0;
+}
+
+.all-video-divider {
+  grid-column: 1 / -1;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #aaa;
+  padding: 24px 0 8px;
+  border-top: 1px solid #eee;
+  margin-top: 16px;
+}
+
+.all-card__img-wrap--empty {
+  background: #ececec;
+  border: 1px solid #e0e0e0;
+}
+
+.all-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.all-card__year {
+  font-size: 9px;
+  letter-spacing: 0.22em;
+  color: #aaa;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.all-card__title {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #111;
+  line-height: 1.4;
+}
+
+.all-card__blurb {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  color: #888;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .all-section .all-entries {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ---------- HORSE VIDEO (bottom right, transparent) ---------- */
+.horse-video-wrap {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 50;
+  pointer-events: none;     /* doesn't block clicks */
+  width: 280px;             /* ← Adjust horse video size */
+  height: auto;
+}
+
+.horse-video {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Transparent bg requires .webm with alpha channel.
+     mix-blend-mode can help with light backgrounds: */
+  mix-blend-mode: multiply;
+}
+
+
+/* ---------- WHITE ROCK SERIES PANEL ---------- */
+#white-rock-panel {
+  max-height: 85vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+}
+
+#white-rock-panel .techno-box-panel__caption {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.white-rock-statement {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.white-rock-statement p {
+  font-size: 8px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #888;
+  line-height: 1.6;
+}
+
+
+/* ---------- SCROLLBAR (subtle) ---------- */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 2px;
+}
+
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .main-layout {
+    flex-direction: column;
+  }
+  .left-col {
+    position: relative;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: baseline;
+  }
+  .year-nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+  }
+  .entry {
+    grid-template-columns: 1fr;
+  }
+  .horse-video-wrap {
+    width: 160px;
+  }
+}
+
+/* ---------- ALL DETAIL PANEL ---------- */
+.all-detail-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+.all-detail-overlay.is-visible {
+  display: flex;
+}
+.all-detail {
+  background: #fff;
+  width: min(900px, 92vw);
+  max-height: 88vh;
+  overflow: auto;
+  border-radius: 8px;
+  padding: 18px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
+}
+.all-detail__media {
+  width: 100%;
+  height: 340px;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.all-detail__media img,
+.all-detail__media video {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+.all-detail__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+.all-detail__subtitle {
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.all-detail__desc {
+  font-size: 14px;
+  color: #222;
+  line-height: 1.5;
+}
+.all-detail__close {
+  position: absolute;
+  right: 24px;
+  top: 18px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
