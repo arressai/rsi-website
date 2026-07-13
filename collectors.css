@@ -1,0 +1,214 @@
+/* ============================================================
+   collectors.css — Password-protected collector preview page
+   Reuses fonts/colors from styles.css; layout is self-contained
+   so this page works independently of the main site nav.
+   ============================================================ */
+
+/* styles.css sets body { overflow: hidden } for the main site's
+   independently-scrolling content panel. Since this page also
+   loads styles.css for shared fonts/colors, override that here so
+   the collector page itself can scroll normally. */
+html, body.collectors-body {
+  overflow-y: auto;
+  height: auto;
+}
+
+.collectors-body {
+  background: #fdfdfd;
+}
+
+/* ---------- GATE ---------- */
+.gate {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  z-index: 200;
+  padding: 24px;
+}
+
+.gate.is-hidden {
+  display: none;
+}
+
+.gate-panel {
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+}
+
+.gate-logo {
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 24px;
+}
+
+.gate-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.gate-desc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.gate-form {
+  display: flex;
+  gap: 8px;
+}
+
+.gate-input {
+  flex: 1;
+  font-size: 13px;
+  font-family: inherit;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+.gate-input:focus {
+  border-color: #111;
+}
+
+.gate-submit {
+  font-size: 12px;
+  font-family: inherit;
+  padding: 10px 18px;
+  border: 1px solid #111;
+  border-radius: 6px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+.gate-submit:hover {
+  background: #333;
+}
+
+.gate-error {
+  margin-top: 14px;
+  font-size: 11px;
+  color: #b00020;
+}
+.gate-error.is-hidden {
+  display: none;
+}
+
+/* ---------- PROTECTED CONTENT ---------- */
+.collector-content {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 24px 80px;
+}
+.collector-content.is-hidden {
+  display: none;
+}
+
+.collector-header {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+.collector-header__logo {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 12px;
+}
+.collector-header__title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.collector-header__desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+.collector-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.collector-item {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 20px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #eee;
+}
+.collector-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.collector-item__thumb {
+  width: 140px;
+  height: 140px;
+  border-radius: 6px;
+  background: #f0f0f0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.collector-item__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.collector-item__thumb.is-empty::after {
+  content: "Image placeholder";
+  font-size: 10px;
+  color: #aaa;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.collector-item__title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.collector-item__meta {
+  font-size: 11px;
+  color: #888;
+  margin-bottom: 8px;
+}
+.collector-item__desc {
+  font-size: 12px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.collector-footer {
+  margin-top: 48px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 11px;
+  color: #999;
+}
+
+@media (max-width: 560px) {
+  .collector-item {
+    grid-template-columns: 96px 1fr;
+  }
+  .collector-item__thumb {
+    width: 96px;
+    height: 96px;
+  }
+}

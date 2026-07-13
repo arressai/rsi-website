@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Performance — ARRESSAI</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-wrap">
+      <a href="index.html" class="logo-link"><img src="arressai-logo.png" alt="ARRESAI Logo" class="logo-img" id="site-logo" /></a>
+      <span class="logo-text-fallback">ARRESAI</span>
+    </div>
+  </header>
+
+  <main class="main-layout performance-layout">
+    <aside class="left-col sidebar-compact">
+      <nav class="year-nav">
+        <a href="index.html" class="year-link">Home</a>
+        <a href="performance.html" class="year-link active">Performance</a>
+        <a href="research.html" class="year-link">Research</a>
+        <a href="projects.html" class="year-link">Projects</a>
+        <a href="contact.html" class="year-link">Contact</a>
+      </nav>
+    </aside>
+
+    <section class="content-col performance-col">
+      <div class="performance-header">
+        <h2>Performance Works</h2>
+      </div>
+
+      <div class="performance-list" id="performanceList">
+        <!-- populated by script.js -->
+      </div>
+
+      <aside class="performance-detail" id="performanceDetail" aria-hidden="true">
+        <button id="performanceDetailClose" class="detail-close">✕</button>
+        <div id="performanceDetailContent" class="performance-detail__content"></div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

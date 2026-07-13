@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARRESSAI — Collector Preview</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="collectors.css" />
+</head>
+<body class="collectors-body">
+
+  <!-- PASSWORD GATE -->
+  <div id="gate" class="gate">
+    <div class="gate-panel">
+      <div class="gate-logo">ARRESSAI</div>
+      <div class="gate-title">Collector Preview</div>
+      <p class="gate-desc">This page is private. Please enter the password you were given to view available works.</p>
+      <form id="gateForm" class="gate-form" autocomplete="off">
+        <input type="password" id="gatePassword" class="gate-input" placeholder="Password" autocomplete="new-password" />
+        <button type="submit" class="gate-submit">Enter</button>
+      </form>
+      <p id="gateError" class="gate-error is-hidden">Incorrect password. Please try again.</p>
+    </div>
+  </div>
+
+  <!-- PROTECTED CONTENT -->
+  <main id="collectorContent" class="collector-content is-hidden">
+
+    <header class="collector-header">
+      <div class="collector-header__logo">ARRESSAI</div>
+      <div class="collector-header__title">Collector Preview</div>
+      <p class="collector-header__desc">A private selection of available works. For inquiries, pricing, or studio visits, please contact directly.</p>
+    </header>
+
+    <section class="collector-list">
+
+      <div class="collector-item">
+        <div class="collector-item__thumb">
+          <img src="collector-placeholder-1.jpg" alt="Untitled work placeholder" onerror="this.style.display='none'; this.parentElement.classList.add('is-empty');" />
+        </div>
+        <div class="collector-item__body">
+          <div class="collector-item__title">Untitled (Working Title)</div>
+          <div class="collector-item__meta">2026 · Mixed media · Dimensions variable</div>
+          <div class="collector-item__desc">Placeholder description — replace with pricing, edition, availability, and material details for this piece.</div>
+        </div>
+      </div>
+
+      <div class="collector-item">
+        <div class="collector-item__thumb">
+          <img src="collector-placeholder-2.jpg" alt="Untitled work placeholder" onerror="this.style.display='none'; this.parentElement.classList.add('is-empty');" />
+        </div>
+        <div class="collector-item__body">
+          <div class="collector-item__title">Untitled (Working Title)</div>
+          <div class="collector-item__meta">2025 · Sculpture · Steel, resin, audio</div>
+          <div class="collector-item__desc">Placeholder description — replace with pricing, edition, availability, and material details for this piece.</div>
+        </div>
+      </div>
+
+      <div class="collector-item">
+        <div class="collector-item__thumb">
+          <img src="collector-placeholder-3.jpg" alt="Untitled work placeholder" onerror="this.style.display='none'; this.parentElement.classList.add('is-empty');" />
+        </div>
+        <div class="collector-item__body">
+          <div class="collector-item__title">Untitled (Working Title)</div>
+          <div class="collector-item__meta">2024 · Painting · Oil on panel</div>
+          <div class="collector-item__desc">Placeholder description — replace with pricing, edition, availability, and material details for this piece.</div>
+        </div>
+      </div>
+
+      <div class="collector-item">
+        <div class="collector-item__thumb">
+          <img src="collector-placeholder-4.jpg" alt="Untitled work placeholder" onerror="this.style.display='none'; this.parentElement.classList.add('is-empty');" />
+        </div>
+        <div class="collector-item__body">
+          <div class="collector-item__title">Untitled (Working Title)</div>
+          <div class="collector-item__meta">2023 · Installation · Glass, neon, audio</div>
+          <div class="collector-item__desc">Placeholder description — replace with pricing, edition, availability, and material details for this piece.</div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer class="collector-footer">
+      <p>© Arressai. Private preview — not for distribution.</p>
+    </footer>
+
+  </main>
+
+  <script src="collectors.js"></script>
+</body>
+</html>

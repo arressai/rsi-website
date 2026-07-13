@@ -115,6 +115,17 @@ const DATA = [
     ]
   },
   {
+    id: "performance",
+    label: "Performance Works",
+    entries: [
+      { title: "A Woman Saying No", meta: "2026", image: "a-woman-saying-no.png", blurb: "Sonic composition and performance · Dock11, Berlin." },
+      { title: "Paper Magazine — Performance Series", meta: "2024–25", image: "", blurb: "Written and performed in 5-day cycles." },
+      { title: "Joshua Tree Music Festival", meta: "2024", image: "", blurb: "Sonic performance · narration by JD Rudometkin." },
+      { title: "Echo Park Rising", meta: "2023", image: "", blurb: "Live performance · Los Angeles." },
+      { title: "WFNM (We Found New Music)", meta: "2022", image: "", blurb: "Live performance · Los Angeles." }
+    ]
+  },
+  {
     id: "video-works",
     label: "Video Works",
     entries: [
@@ -323,7 +334,7 @@ function initScrollSpy() {
         }
       });
     },
-    { rootMargin: "-30% 0px -60% 0px" }
+    { root: document.querySelector('.content-col'), rootMargin: "-30% 0px -60% 0px" }
   );
 
   sections.forEach(({ target }) => observer.observe(target));
@@ -333,10 +344,6 @@ function initScrollSpy() {
 // ── FILTER BY YEAR ───────────────────────────────────────────
 function setYearFilter(targetId) {
   const allBlocks = document.querySelectorAll(".year-block");
-  const contentCol = document.querySelector(".content-col");
-  if (contentCol) {
-    contentCol.classList.toggle("is-centered", targetId !== "all");
-  }
 
   allBlocks.forEach(block => {
     if (targetId === "all") {
@@ -353,18 +360,24 @@ function setYearFilter(targetId) {
 function initYearFiltering() {
   const yearLinks = document.querySelectorAll(".year-link");
   const allLink = document.querySelector(".all-link");
+  const sectionLinks = document.querySelectorAll('.section-link');
 
   yearLinks.forEach(link => {
     link.addEventListener("click", event => {
       event.preventDefault();
       const targetId = link.getAttribute("href").replace("#", "");
 
+      // If the user selected the performance section from the left nav, ensure we build it
+      if (targetId === 'performance' && document.getElementById('performanceList')) {
+        buildPerformancePage();
+      }
+
       setYearFilter(targetId);
       yearLinks.forEach(l => l.classList.remove("active"));
       link.classList.add("active");
 
       const target = document.getElementById(targetId);
-      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (target) scrollToAlign(target);
     });
   });
 
@@ -375,9 +388,69 @@ function initYearFiltering() {
       yearLinks.forEach(l => l.classList.remove("active"));
 
       const target = document.getElementById("all");
-      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+      if (target) scrollToAlign(target);
     });
   }
+
+  // Logo click returns to the curated featured landing page
+  const logoHomeLink = document.getElementById('logo-home-link');
+  if (logoHomeLink) {
+    logoHomeLink.addEventListener('click', event => {
+      event.preventDefault();
+      setYearFilter('featured');
+      yearLinks.forEach(l => l.classList.remove('active'));
+      sectionLinks.forEach(l => l.classList.remove('active'));
+
+      const target = document.getElementById('featured');
+      if (target) scrollToAlign(target);
+    });
+  }
+
+  // section links behave like year links (filter content)
+  if (sectionLinks) {
+    sectionLinks.forEach(s => {
+      s.addEventListener('click', e => {
+        e.preventDefault();
+        const targetId = s.getAttribute('href').replace('#','');
+        setYearFilter(targetId);
+        // clear active on year links and section links
+        yearLinks.forEach(l => l.classList.remove('active'));
+        sectionLinks.forEach(l => l.classList.remove('active'));
+        s.classList.add('active');
+        // build performance list if needed
+        if (targetId === 'performance' && document.getElementById('performanceList')) buildPerformancePage();
+        const target = document.getElementById(targetId);
+        if (target) scrollToAlign(target);
+      });
+    });
+  }
+
+// Scroll helper: align the top of `target` so it appears at the same viewport position
+// as the top of the content column (which is already aligned with the left nav / logo).
+// .content-col is now an independently-scrolling panel, so we scroll it directly
+// instead of the window.
+function scrollToAlign(target) {
+  if (!target) return;
+
+  const contentCol = document.querySelector('.content-col');
+  if (!contentCol) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+
+  // Use scrollTop 0 as the measurement baseline (rather than the current, possibly
+  // mid-animation, scrollTop) to avoid compounding errors from a previous smooth
+  // scroll that hasn't finished yet — this was causing the first thumbnail/title
+  // to be scrolled slightly past the top edge and appear cropped.
+  const containerRect = contentCol.getBoundingClientRect();
+  const targetRect = target.getBoundingClientRect();
+  const targetOffsetWithinContainer = (targetRect.top - containerRect.top) + contentCol.scrollTop;
+  // Leave a small buffer so the target's top padding/title is never flush against
+  // (or scrolled past) the container's edge.
+  const topBuffer = 16;
+  const scrollTop = Math.max(0, Math.round(targetOffsetWithinContainer - topBuffer));
+  contentCol.scrollTo({ top: scrollTop, behavior: 'auto' });
+}
 }
 
 
@@ -407,7 +480,7 @@ function initMediaPanels() {
     if (!trigger) return;
     const rect = trigger.getBoundingClientRect();
     const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
-    const normalizedTop = Math.min(Math.max(rect.top / viewportHeight, 0.15), 0.85);
+    const normalizedTop = Math.min(Math.max(rect.top / viewportHeight, 0.20), 0.85);
     const targetTop = 0.55 + (normalizedTop - 0.5) * 0.35;
     document.documentElement.style.setProperty(
       "--media-panel-top",
@@ -435,7 +508,10 @@ function initMediaPanels() {
     });
   });
 
-  window.addEventListener("scroll", () => {
+  // .content-col now scrolls independently (the page itself no longer scrolls),
+  // so listen there instead of on window.
+  const scrollContainer = document.querySelector('.content-col') || window;
+  scrollContainer.addEventListener("scroll", () => {
     if (activeTrigger) {
       setPanelPosition(activeTrigger);
     }
@@ -505,6 +581,126 @@ function initAudioPlayers() {
 }
 
 
+// ── MINI PLAY BUTTON (simple black play/pause for year-items) ──────
+function initMiniAudioPlayers() {
+  const buttons = document.querySelectorAll("[data-mini-audio-toggle]");
+
+  buttons.forEach(button => {
+    const wrap = button.closest(".year-item__audio");
+    const media = wrap ? wrap.querySelector("[data-mini-audio-media]") : null;
+    if (!media) return;
+
+    button.addEventListener("click", event => {
+      // Prevent this click from bubbling up to the work-detail overlay handler
+      event.stopPropagation();
+      event.preventDefault();
+
+      if (!media.currentSrc && !media.querySelector("source[src]")?.getAttribute("src")) {
+        // No audio source set yet — nothing to play.
+        return;
+      }
+
+      // Pause any other mini players currently playing
+      document.querySelectorAll(".year-item__media").forEach(other => {
+        if (other !== media && !other.paused) {
+          other.pause();
+        }
+      });
+
+      if (media.paused) {
+        media.play();
+      } else {
+        media.pause();
+      }
+    });
+
+    media.addEventListener("play", () => {
+      button.textContent = "❚❚";
+      button.setAttribute("aria-label", "Pause");
+    });
+
+    media.addEventListener("pause", () => {
+      button.textContent = "▶";
+      button.setAttribute("aria-label", "Play");
+    });
+
+    media.addEventListener("ended", () => {
+      button.textContent = "▶";
+      button.setAttribute("aria-label", "Play");
+    });
+  });
+}
+
+
+// ---------- WORK DETAIL OVERLAY HANDLER ----------
+function openWorkDetail({ title = '', meta = '', image = '', desc = '' } = {}) {
+  const overlay = document.getElementById('workDetailOverlay');
+  const media = document.getElementById('workDetailMedia');
+  const titleEl = document.getElementById('workDetailTitle');
+  const metaEl = document.getElementById('workDetailMeta');
+  const descEl = document.getElementById('workDetailDesc');
+  if (!overlay) return;
+
+  media.innerHTML = '';
+  if (image) {
+    const img = document.createElement('img');
+    img.src = image;
+    img.alt = title || '';
+    media.appendChild(img);
+  }
+
+  titleEl.textContent = title || '';
+  metaEl.textContent = meta || '';
+  descEl.textContent = desc || '';
+
+  overlay.classList.add('is-visible');
+  overlay.setAttribute('aria-hidden', 'false');
+
+  const closeBtn = document.getElementById('workDetailClose');
+  if (closeBtn && !closeBtn.dataset.bound) {
+    closeBtn.addEventListener('click', () => {
+      overlay.classList.remove('is-visible');
+      overlay.setAttribute('aria-hidden', 'true');
+    });
+    closeBtn.dataset.bound = 'true';
+  }
+
+  // close on backdrop click
+  if (!overlay.dataset.backdropBound) {
+    overlay.addEventListener('click', e => {
+      if (e.target === overlay) {
+        overlay.classList.remove('is-visible');
+        overlay.setAttribute('aria-hidden', 'true');
+      }
+    });
+    overlay.dataset.backdropBound = 'true';
+  }
+
+  // ESC key close
+  if (!document._workDetailEscBound) {
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        overlay.classList.remove('is-visible');
+        overlay.setAttribute('aria-hidden', 'true');
+      }
+    });
+    document._workDetailEscBound = true;
+  }
+}
+
+// Delegated handler: if any element with data-work-title is clicked, open overlay with attributes
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-work-title]');
+  if (!el) return;
+  e.preventDefault();
+  const title = el.getAttribute('data-work-title') || '';
+  const meta = el.getAttribute('data-work-meta') || '';
+  const image = el.getAttribute('data-work-image') || '';
+  const desc = el.getAttribute('data-work-desc') || '';
+  openWorkDetail({ title, meta, image, desc });
+});
+
+
 // ── INIT ──────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
   buildAllSection();
@@ -512,4 +708,125 @@ document.addEventListener("DOMContentLoaded", () => {
   initYearFiltering();
   initMediaPanels();
   initAudioPlayers();
+  initMiniAudioPlayers();
+  // Default landing view: curated featured works page. All year/section
+  // blocks stay hidden until the user clicks a year or section link.
+  setYearFilter('featured');
+  // performance page builder
+  if (document.getElementById('performanceList')) {
+    buildPerformancePage();
+  }
+  // logo scroll effect removed per user request
+  // compute initial left-col top offset and re-compute on resize
+  updateLeftColTopFromLogo();
+  window.addEventListener('resize', updateLeftColTopFromLogo);
+  const logoImg = document.getElementById('site-logo');
+  if (logoImg) logoImg.addEventListener('load', updateLeftColTopFromLogo);
 });
+
+
+// Build the performance listing page from DATA
+function buildPerformancePage() {
+  const perfGroup = DATA.find(g => g.id === 'performance');
+  if (!perfGroup) return;
+
+  const list = document.getElementById('performanceList');
+  const detail = document.getElementById('performanceDetail');
+  const detailContent = document.getElementById('performanceDetailContent');
+  const closeBtn = document.getElementById('performanceDetailClose');
+
+  list.innerHTML = '';
+
+  perfGroup.entries.forEach(entry => {
+    const row = document.createElement('div');
+    row.className = 'performance-item';
+    const title = document.createElement('div');
+    title.className = 'performance-item__title';
+    title.textContent = entry.title;
+    const meta = document.createElement('div');
+    meta.className = 'performance-item__meta';
+    meta.textContent = entry.meta || '';
+    row.appendChild(title);
+    row.appendChild(meta);
+
+    row.addEventListener('click', () => {
+      detail.setAttribute('aria-hidden', 'false');
+      detail.classList.remove('is-hidden');
+      detailContent.innerHTML = `
+        <h3>${entry.title}</h3>
+        <p class="performance-item__meta">${entry.meta || ''}</p>
+        <p>${entry.blurb || ''}</p>
+      `;
+    });
+
+    list.appendChild(row);
+  });
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      detail.setAttribute('aria-hidden', 'true');
+      detail.classList.add('is-hidden');
+    });
+  }
+}
+
+// LOGO: evolve distortion with scroll
+function initLogoScrollEffect() {
+  const logo = document.getElementById('site-logo');
+  if (!logo) return;
+
+  let lastScroll = window.scrollY;
+  let ticking = false;
+
+  const update = () => {
+    const s = window.scrollY;
+    // map scroll to small ranges for transform
+    const t = Math.min(1, s / 600);
+    const rot = -4 - t * 6;      // -4deg to -10deg
+    const skew = -6 - t * 8;     // -6deg to -14deg
+    const scale = 1.02 + t * 0.03; // 1.02 to 1.05
+    const contrast = 1.05 + t * 0.1;
+    const saturate = 1.2 + t * 0.15;
+    const hue = -6 - t * 6;      // -6deg to -12deg
+
+    logo.style.setProperty('--logo-rot', rot + 'deg');
+    logo.style.setProperty('--logo-skew', skew + 'deg');
+    logo.style.setProperty('--logo-scale', scale);
+    logo.style.setProperty('--logo-contrast', contrast);
+    logo.style.setProperty('--logo-saturate', saturate);
+    logo.style.setProperty('--logo-hue', hue + 'deg');
+
+    ticking = false;
+  };
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+}
+
+// compute and set --left-col-top from the bottom of the logo + a fixed gap.
+// (Simplified: the previous formula tried to match an internal nav gap but produced
+// unreliable, sometimes too-small values, causing the left-col/content-col to sit
+// too close to the logo or even overlap it.)
+function updateLeftColBottomFromLogo() {
+  const logo = document.getElementById('site-logo');
+  if (!logo) return;
+  const rect = logo.getBoundingClientRect();
+  const gap = 24; // px gap between the bottom of the logo and the top of the nav/content
+  const topPx = Math.max(40, Math.round(rect.bottom + gap));
+  // set the CSS variable on root
+  document.documentElement.style.setProperty('--left-col-top', topPx + 'px');
+}
+
+// Stable wrapper used by init listeners; calls the detailed computation above.
+function updateLeftColTopFromLogo() {
+  if (typeof updateLeftColBottomFromLogo === 'function') {
+    updateLeftColBottomFromLogo();
+    return;
+  }
+  // fallback: set a reasonable default
+  document.documentElement.style.setProperty('--left-col-top', '72px');
+}

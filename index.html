@@ -11,12 +11,12 @@
 
   <!-- TOP RIGHT LOGO -->
   <header class="site-header">
-    <div class="logo-wrap">
+    <a href="#featured" class="logo-wrap" id="logo-home-link">
       <!-- Replace src with your logo image -->
-      <img src="arressai-logo.png" alt="ARRESAI Logo" class="logo-img" id="site-logo" />
+      <img src="logo-five.png" alt="ARRESSAI Logo" class="logo-img" id="site-logo" />
       <!-- Fallback text logo if no image -->
       <span class="logo-text-fallback">ARRESAI</span>
-    </div>
+    </a>
   </header>
 
   <!-- MAIN LAYOUT -->
@@ -32,8 +32,7 @@
       </div> -->
 
       <nav class="year-nav">
-        <div class="artist-bio">Katie Cline (ARRESSAI) is a multi-media sound and installation artist working across spatial audio, physical computing, and research-based practice.</div>
-        <a href="#y2026" class="year-link active">2026</a>
+        <a href="#y2026" class="year-link">2026</a>
         <a href="#y2025" class="year-link">2025</a>
         <a href="#y2024" class="year-link">2024</a>
         <a href="#y2023" class="year-link">2023</a>
@@ -42,7 +41,14 @@
         <a href="#y2020" class="year-link">2020</a>
         <a href="#y2019" class="year-link">2019</a>
         <a href="#y2018" class="year-link">2018</a>
-        <a href="#video-works" class="year-link">VIDEO</a>
+          <!-- VIDEO year-link removed to avoid duplicate; use lowercase 'video' in section-nav -->
+      </nav>
+
+      <nav class="section-nav" aria-label="Sections">
+        <a href="#performance" class="section-link">performance</a>
+        <a href="#research" class="section-link">research</a>
+        <a href="#video-works" class="section-link">video</a>
+        <a href="#press" class="section-link">press / cv</a>
       </nav>
 
       <a href="#all" class="all-link">ALL</a>
@@ -52,7 +58,8 @@
     <!-- CENTER COLUMN: Content Panels -->
     <section class="content-col">
 
-      <!-- UPCOMING -->
+      <!--
+      UPCOMING
       <div class="year-block" id="upcoming">
         <div class="year-label">UPCOMING</div>
         <div class="entries">
@@ -65,469 +72,770 @@
               <span class="entry-location"><br>西岸艺术中心A馆龙腾大道 2555 号
               <br>West Bund Art Center Hall A2555 Longteng Ave, Shanghai</span>
             </div>
-            <div class="entry-meta"><!-- Add details --></div>
+            <div class="entry-meta">Add details</div>
           </div>
         </div>
       </div>
+      -->
 
-      <!-- CURRENT -->
+      <!-- CURRENT
       <div class="year-block" id="current">
         <div class="year-label">CURRENT</div>
         <div class="entries">
           <div class="entry">
             <div class="entry-title">IMA RESIDENCY MASTERS @ TISCH, NYU</div>
-            <div class="entry-meta"><!-- Add details --></div>
+            <div class="entry-meta"> Add details </div>
           </div>
         </div>
+      </div> -->
+
+      <!-- FEATURED (default landing view) -->
+      <div class="year-block" id="featured">
+        <div class="year-label">FEATURED</div>
+
+        <!-- Sonic Phenomena III Parts -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">SONIC PHENOMENA III PARTS</div>
+            <div class="entry-meta">Tisch IMA Low Residency · West Bund Art Center, Shanghai · June 2026</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="bassBath" data-work-meta="Part III · June 2026" data-work-image="bass-bath-thumbnail.png" data-work-desc="Generative audio · Surveillance · 100 metronomes">
+              <div class="year-item__thumb"><img src="bass-bath-thumbnail-2.jpg" alt="bassBath" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">bassBath</div>
+                <div class="entry-meta">Part I · Spatial audio composition · Audio visual installation </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="senseTension" data-work-meta="Part II · June 2026" data-work-image="sense-tension-thumbnail-2.png" data-work-desc="Spatial audio · Physical computing">
+              <div class="year-item__thumb"><img src="sense-tension-screen.png" alt="senseTension" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">senseTension</div>
+                <div class="entry-meta">Part II · Spatial audio composition · Physical computing · Kinetic sculpture · Sensor array </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="attentionEconomy" data-work-meta="Part III · June 2026" data-work-image="attention-economy-thumbnail.png" data-work-desc="Multichannel spatial audio · Sensor array">
+              <div class="year-item__thumb"><img src="attention-economy-thumbnail-3.png" alt="attentionEconomy" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">attentionEconomy</div>
+                <div class="entry-meta">Part III · Metronome performance · Mechatronic sculpture </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- A Woman Saying No -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">A WOMAN SAYING NO</div>
+            <div class="entry-meta">Tisch IMA Low Residency · Dock11, Berlin · January 17th</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="A WOMAN SAYING NO" data-work-meta="Tisch IMA Low Residency · Dock11, Berlin · January 17th" data-work-image="a-woman-saying-no.png" data-work-desc="Tisch IMA Low Residency · Dock11, Berlin · January 17th.">
+              <div class="year-item__thumb"><img src="a-woman-saying-no.png" alt="A WOMAN SAYING NO" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">a woman, saying "no"</div>
+                <div class="entry-meta">Spatial audio composition · Performance · Physical computing · Installation </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- seaSonic3000 -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">SEASONIC3000</div>
+            <div class="entry-meta">ITP Exhibit (ITP Grant Recipient) · IMA Tisch · New York · December 14th – 15th</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="seaSonic3000" data-work-meta="ITP Winter Exhibition · Dec 14th–15th" data-work-image="seaSonic3000.png" data-work-desc="Interactive web-based experience and physical work exploring AI and deep sea animal senses.">
+              <div class="year-item__thumb"><img src="seaSonic3000.png" alt="seaSonic3000" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">seaSonic3000</div>
+                <div class="entry-meta">Interactive web · Soft robotics · Speculative future · Protopian visions </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Immer -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">IMMER</div>
+            <div class="entry-meta">Salt Tower, Los Angeles · June 28th – 29th</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="IMMER" data-work-meta="Salt Tower, Los Angeles · June 28th–29th" data-work-image="immer.png" data-work-desc="Salt Tower, Los Angeles. June 28th – 29th, 2025.">
+              <div class="year-item__thumb"><img src="immer-four.png" alt="Immer Salt Tower" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Immer</div>
+                <div class="entry-meta">Salt Tower, Los Angeles · June 28th–29th</div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- And the Darkness Burned Away -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">"AND THE DARKNESS BURNED AWAY"</div>
+            <div class="entry-meta">Group Show · December 2021</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Her" data-work-meta="Immersive Sonic Installation" data-work-image="her-hips.png" data-work-desc="63 × 43 × 13 cm / 25 × 17 × 5.1 in. Coal slag, glass, argon, audio, the artist's clothing. Immersive sonic installation.">
+              <div class="year-item__thumb"><img src="her-hips.png" alt="Her Hips artwork" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Her</div>
+                <div class="entry-meta">63 × 43 × 13 cm &nbsp;&nbsp; 25 × 17 × 5.1 in · Coal slag, glass, argon, audio, the artist's clothing · Immersive sonic installation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chrome Group Show -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">"CHROME" GROUP SHOW</div>
+            <div class="entry-meta">December 2018</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Blood Box / Spirit Vein" data-work-meta="17 × 15.5 × 13 cm · 6.7 × 6.1 × 5.1 in" data-work-image="blood-box-web.png" data-work-desc="Glass, steel, neon, plexi, epoxy, 400ml artist's blood.">
+              <div class="year-item__thumb"><img src="blood-box-web.png" alt="Blood Box / Spirit Vein artwork" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Blood Box / Spirit Vein</div>
+                <div class="entry-meta">17 × 15.5 × 13 cm &nbsp;&nbsp; 6.7 × 6.1 × 5.1 in · Glass, steel, neon, plexi, epoxy, 400ml artist's blood</div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="The Most Pertinent Tumor" data-work-meta="63 × 43 × 13 cm · 25 × 17 × 5.1 in" data-work-image="tumor-all-page.png" data-work-desc="Clay, cigarettes, plastic, rope, contact microphones. Interactive sound installation.">
+              <div class="year-item__thumb"><img src="tumor-all-page.png" alt="The Most Pertinent Tumor artwork" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">The Most Pertinent Tumor</div>
+                <div class="entry-meta">63 × 43 × 13 cm &nbsp;&nbsp; 25 × 17 × 5.1 in · Clay, cigarettes, plastic, rope, contact microphones · Interactive sound installation</div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="chrome-audio.mp3" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Here Group Show -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">"HERE" GROUP SHOW</div>
+            <div class="entry-meta">September 2018</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Dissemination I" data-work-meta="45.2 × 27.9 × 10.7 cm · 17.8 × 11 × 4.2 in" data-work-image="diseemination_web.png" data-work-desc="Acrylic, hydro-beads, steel, misting system.">
+              <div class="year-item__thumb"><img src="diseemination_web.png" alt="Dissemination I and II artwork" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Dissemination I</div>
+                <div class="entry-meta">45.2 × 27.9 × 10.7 cm &nbsp;&nbsp; 17.8 × 11 × 4.2 in · Acrylic, hydro-beads, steel, misting system</div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="Dissemination II" data-work-meta="45.2 × 27.9 × 10.7 cm · 17.8 × 11 × 4.2 in" data-work-image="" data-work-desc="Acrylic, hydro-beads, steel, misting system.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">Dissemination II</div>
+                <div class="entry-meta">45.2 × 27.9 × 10.7 cm &nbsp;&nbsp; 17.8 × 11 × 4.2 in · Acrylic, hydro-beads, steel, misting system</div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="dissemination-audio.mp3" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- 2026 -->
       <div class="year-block" id="y2026">
         <div class="year-label">2026</div>
-        <div class="entries">
-          <div class="entry">
-            <div class="entry-title" data-panel-target="fever-dream-panel">"FEVER DREAM" FRIDAY GALLERY,<span class="entry-location"> Los Angeles, FEBRUARY 28th</span></div>
-            <div class="entry-meta"></div>
+
+        <!-- GROUP 1: Sonic Phenomena in III Parts -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">SONIC PHENOMENA III PARTS</div>
+            <div class="entry-meta">Tisch IMA Low Residency · West Bund Art Center, Shanghai · June 2026</div>
           </div>
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="berlin-panel">IMA WINTER EXHIBITION,<span class="entry-location"> Berlin,  January 17th</span></div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="berlin-panel" aria-hidden="true">
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__pair">
-                    <div class="techno-box-panel__item">
-                      <img src="a-woman-2.png" alt="A Woman 2" class="techno-box-panel__image techno-box-panel__image--small" />
-                    </div>
-                    <div class="techno-box-panel__item">
-                      <img src="a-woman-3.png" alt="A Woman 3" class="techno-box-panel__image techno-box-panel__image--small" />
-                    </div>
-                  </div>
-                  <div class="techno-box-panel__spacer"></div>
-                  <img src="a-woman-saying-no.png" alt="A Woman Saying No" class="techno-box-panel__image" />
-                  <div class="techno-box-panel__spacer"></div>
-                  <div class="techno-box-panel__title">IMA WINTER EXHIBITION</div>
-                  <div class="techno-box-panel__details">
-                    <div>Berlin, January 17th</div>
-                  </div>
+
+          <div class="year-items">
+            <div class="year-item" data-work-title="bassBath" data-work-meta="Part III · June 2026" data-work-image="bass-bath-thumbnail.png" data-work-desc="Generative audio · Surveillance · 100 metronomes">
+              <div class="year-item__thumb"><img src="bass-bath-thumbnail-2.jpg" alt="bassBath" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">bassBath</div>
+                <div class="entry-meta">Part I · Spatial audio composition · Audio visual installation </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+
+            <div class="year-item" data-work-title="senseTension" data-work-meta="Part II · June 2026" data-work-image="sense-tension-thumbnail-2.png" data-work-desc="Spatial audio · Physical computing">
+              <div class="year-item__thumb"><img src="sense-tension-screen.png" alt="senseTension" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">senseTension</div>
+                <div class="entry-meta">Part II · Spatial audio composition · Physical computing · Kinetic sculpture · Sensor array </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+
+            <div class="year-item" data-work-title="attentionEconomy" data-work-meta="Part III · June 2026" data-work-image="attention-economy-thumbnail.png" data-work-desc="Multichannel spatial audio · Sensor array">
+              <div class="year-item__thumb"><img src="attention-economy-thumbnail-3.png" alt="attentionEconomy" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">attentionEconomy</div>
+                <div class="entry-meta">Part III · Metronome performance · Mechatronic sculpture </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- GROUP 2: Fever Dream -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">MUGWORT WILD</div>
+            <div class="entry-meta">Friday Gallery, Los Angeles · February 28th</div>
+          </div>
+
+          <div class="year-items">
+            <div class="year-item" data-work-title="MUGWORT REWILD" data-work-meta="Los Angeles · February 28th" data-work-image="mugwort-rewild-test.png" data-work-desc="Solo exhibition, Friday Gallery, Los Angeles.">
+              <div class="year-item__thumb"><img src="mugwort-rewild-test.png" alt="MUGWORT REWILD" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">mugwortWild</div>
+                <div class="entry-meta"> Live performance · Audio composition · Plant impulse composition </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GROUP 3: IMA Winter Exhibition -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">A WOMAN SAYING NO</div>
+            <div class="entry-meta">Tisch IMA Low Residency · Dock11, Berlin · January 17th</div>
+          </div>
+
+          <div class="year-items">
+            <div class="year-item" data-work-title="A WOMAN SAYING NO" data-work-meta="Tisch IMA Low Residency · Dock11, Berlin · January 17th" data-work-image="a-woman-saying-no.png" data-work-desc="Tisch IMA Low Residency · Dock11, Berlin · January 17th.">
+              <div class="year-item__thumb"><img src="a-woman-saying-no.png" alt="A WOMAN SAYING NO" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">a woman, saying "no"</div>
+                <div class="entry-meta">Spatial audio composition · Performance · Physical computing · Installation </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- 2025 -->
       <div class="year-block" id="y2025">
         <div class="year-label">2025</div>
-        <div class="entries">
-          <div class="entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="bass-bath-panel">"bassbatH" tera house,<span class="entry-location"> Joshua tree, january 8th</span></div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="bass-bath-panel" aria-hidden="true">
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__stack">
-                    <img src="bassbath-web-2.png" alt="Bass Bath artwork view 1" class="techno-box-panel__image techno-box-panel__image--stack" />
-                    <div class="techno-box-panel__item">
-                      <img src="bassbath-web.png" alt="Bass Bath artwork view 2" class="techno-box-panel__image techno-box-panel__image--stack" />
-                      <div class="techno-box-panel__title">BASS BATH</div>
-                      <div class="techno-box-panel__details">
-                        <div>Tera House</div>
-                        <div>Joshua Tree, California</div>
-                        <div>Audio installation and performance work.</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="audio-player" data-audio-player>
-                    <button class="audio-player__control" type="button" aria-label="Play" data-audio-toggle>
-                      ▶
-                    </button>
-                    <div class="audio-player__track" data-audio-track>
-                      <div class="audio-player__progress" data-audio-progress></div>
-                    </div>
-                    <span class="audio-player__time" data-audio-time>0:00</span>
-                    <audio class="audio-player__media" preload="none">
-                      <source src="bassBath-web.mp3" type="audio/mpeg" />
-                    </audio>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+        <!-- GROUP 1: ITP Winter Exhibition -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">SEASONIC3000</div>
+            <div class="entry-meta">ITP Exhibit (ITP Grant Recipient) · IMA Tisch · New York · December 14th – 15th</div>
           </div>
-          <div class="entry">
-            <div class="entry-title">IMA SUMMER EXHIBITION,<span class="entry-location"> New York, AUGUST 13TH  </span></div>
-            <div class="entry-meta"></div>
-          </div>
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="adms-panel">ADMS GUEST SPEAKER, <span class="entry-location"> Austin, june 2nd  </span></div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="adms-panel" aria-hidden="true">
-                <img src="adms.JPG" alt="ADMS Guest Speaker" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">ADMS GUEST SPEAKER</div>
-                  <div class="techno-box-panel__details">
-                    <div>Austin Dance Music Summit</div>
-                    <div>Austin, June 2nd</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="seasonic-panel">ITP WINTER EXHIBITION, <br><span class="entry-note">(ITP GRANT RECIPIENT)</span><span class="entry-location"> New York, DECEMBER 14TH - 15TH </span></div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="seasonic-panel" aria-hidden="true">
-                <img src="seaSonic3000.png" alt="seaSonic3000 artwork" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">SEASONIC3000</div>
-                  <div class="techno-box-panel__details">
-                    <div>Interactive web-based experience and physical work exploring AI</div>
-                    <div>and deep sea animal senses.</div>
-                  </div>
-                  <div class="audio-player" data-audio-player>
-                    <button class="audio-player__control" type="button" aria-label="Play" data-audio-toggle>
-                      ▶
-                    </button>
-                    <div class="audio-player__track" data-audio-track>
-                      <div class="audio-player__progress" data-audio-progress></div>
-                    </div>
-                    <span class="audio-player__time" data-audio-time>0:00</span>
-                    <audio class="audio-player__media" preload="none">
-                      <source src="underDaSea-rd-web.mp3" type="audio/mpeg" />
-                    </audio>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="lording-panel">LORDING</div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="lording-panel" aria-hidden="true">
-                <img src="lording-lamb.png" alt="Lording" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">LORDING</div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="immer-panel">"IMMER" SALT TOWER, <BR> <span class="entry-location">Los Angeles, JUNE 28TH - 29TH</span></div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="immer-panel" aria-hidden="true">
-                <img src="immer.png" alt="Immer Salt Tower" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">IMMER</div>
-                  <div class="techno-box-panel__details">
-                    <div>Salt Tower, Los Angeles</div>
-                    <div>June 28th – 29th, 2025</div>
-                  </div>
+
+          <div class="year-items">
+            <div class="year-item" data-work-title="seaSonic3000" data-work-meta="ITP Winter Exhibition · Dec 14th–15th" data-work-image="seaSonic3000.png" data-work-desc="Interactive web-based experience and physical work exploring AI and deep sea animal senses.">
+              <div class="year-item__thumb"><img src="seaSonic3000.png" alt="seaSonic3000" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">seaSonic3000</div>
+                <div class="entry-meta">Interactive web · Soft robotics · Speculative future · Protopian visions </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- GROUP 2: IMA Summer Exhibition -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">SHE COULD BE SHY</div>
+            <div class="entry-meta">Sony Audio Institute · Brooklyn · August 13th</div>
+          </div>
+
+          <div class="year-items">
+            <div class="year-item" data-work-title="SHE COULD BE SHY" data-work-meta="New York · August 13th" data-work-image="shecouldbeshy.png" data-work-desc="Group exhibition, IMA, New York.">
+              <div class="year-item__thumb"><img src="coyote-mint.png" alt="SHE COULD BE SHY" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">she could be shy</div>
+                <div class="entry-meta">Spatial audio composition · Interactive sensor array · Plant impulse composition </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GROUP 3: Immer, Salt Tower -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">IMMER</div>
+            <div class="entry-meta">Salt Tower, Los Angeles · June 28th – 29th</div>
+          </div>
+
+          <div class="year-items">
+            <div class="year-item" data-work-title="IMMER" data-work-meta="Salt Tower, Los Angeles · June 28th–29th" data-work-image="immer.png" data-work-desc="Salt Tower, Los Angeles. June 28th – 29th, 2025.">
+              <div class="year-item__thumb"><img src="immer-four.png" alt="Immer Salt Tower" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">immer</div>
+                <div class="entry-meta">Multi sensory curation · Modular synth performance · Sonic composition · Plant impulse composition </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GROUP 5: Lording -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">LORDING</div>
+            <div class="entry-meta">2025</div>
+          </div>
+
+          <div class="year-items">
+            <div class="year-item" data-work-title="LORDING" data-work-meta="2025" data-work-image="lording-lamb.png" data-work-desc="Lording.">
+              <div class="year-item__thumb"><img src="lording-lamb.png" alt="Lording" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">lording</div>
+                <div class="entry-meta">Performance · Spatial audio composition · Video </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GROUP 6: bassBath, Tera House -->
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">BASSBATH</div>
+            <div class="entry-meta">Tera House, Joshua Tree · January 8th</div>
+          </div>
+
+          <div class="year-items">
+            <div class="year-item" data-work-title="bassBath" data-work-meta="Tera House, Joshua Tree · January 8th" data-work-image="bassbath-web-2.png" data-work-desc="Tera House, Joshua Tree, California. Audio installation and performance work.">
+              <div class="year-item__thumb"><img src="bassbath-web-2.png" alt="Bass Bath" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">bassBath</div>
+                <div class="entry-meta"> Sonic visual installation · Spatial audio composition · Performance </div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- 2024 -->
       <div class="year-block" id="y2024">
         <div class="year-label">2024</div>
-        <div class="entries">
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="saguaro-2024-panel">APRIL SAGUARO HOTEL PARTNERSHIP</div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="saguaro-2024-panel" aria-hidden="true">
-                <img src="saguaro-two.png" alt="Saguaro Hotel Partnership 2024" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">SAGUARO HOTEL PARTNERSHIP</div>
-                  <div class="techno-box-panel__details">
-                    <div>April 2024</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">Saguaro Hotel Partnership</div>
+            <div class="entry-meta">April 2024</div>
           </div>
-          <div class="entry">
-            <div class="entry-title">JUNE/JULY GRACIE JIU JITSU PARTNERSHIP</div>
-            <div class="entry-meta"></div>
-          </div>
-          <div class="entry">
-            <div class="entry-title">DECEMBER ADMS GUEST SPEAKER</div>
-            <div class="entry-meta"></div>
-          </div>
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="dreamscapes-panel">DREAMSCAPES</div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="dreamscapes-panel" aria-hidden="true">
-                <img src="dreamscape-four.png" alt="Dreamscapes" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">DREAMSCAPES</div>
-                </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Saguaro Hotel Partnership" data-work-meta="April 2024" data-work-image="saguaro-two.png" data-work-desc="Ongoing partnership with the Saguaro Hotel.">
+              <div class="year-item__thumb"><img src="saguaro-two.png" alt="Saguaro Hotel Partnership" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Saguaro Hotel Partnership</div>
+                <div class="entry-meta">April 2024</div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">Gracie Jiu Jitsu Partnership</div>
+            <div class="entry-meta">June / July</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Gracie Jiu Jitsu Partnership" data-work-meta="June / July 2024" data-work-image="" data-work-desc="Partnership with Gracie Jiu Jitsu.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">Gracie Jiu Jitsu Partnership</div>
+                <div class="entry-meta">June / July</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">ADMS Guest Speaker</div>
+            <div class="entry-meta">December</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="ADMS Guest Speaker" data-work-meta="December 2024" data-work-image="" data-work-desc="Guest speaker appearance at ADMS.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">ADMS Guest Speaker</div>
+                <div class="entry-meta">December</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">Dreamscapes</div>
+            <div class="entry-meta">2024</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Dreamscapes" data-work-meta="2024" data-work-image="dreamscape-four.png" data-work-desc="Dreamscapes.">
+              <div class="year-item__thumb"><img src="dreamscape-four.png" alt="Dreamscapes" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Dreamscapes</div>
+                <div class="entry-meta">2024</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- 2023 -->
       <div class="year-block" id="y2023">
         <div class="year-label">2023</div>
-        <div class="entries">
-          <div class="entry">
-            <div class="entry-title">APRIL SAGUARO HOTEL PARTNERSHIP</div>
-            <div class="entry-meta"></div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">Saguaro Hotel Partnership</div>
+            <div class="entry-meta">April 2023</div>
           </div>
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="major-moon-panel">JANUARY MAJOR MOON PRIVATE PIECE</div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="major-moon-panel" aria-hidden="true">
-                <img src="major-moon.png" alt="Major Moon Private Piece" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">MAJOR MOON</div>
-                  <div class="techno-box-panel__details">
-                    <div>Private Piece, January 2023</div>
-                  </div>
-                </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Saguaro Hotel Partnership" data-work-meta="April 2023" data-work-image="" data-work-desc="Ongoing partnership with the Saguaro Hotel.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">Saguaro Hotel Partnership</div>
+                <div class="entry-meta">April</div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">Major Moon</div>
+            <div class="entry-meta">Private Piece · January 2023</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Major Moon" data-work-meta="Private Piece · January 2023" data-work-image="major-moon.png" data-work-desc="Private Piece, January 2023.">
+              <div class="year-item__thumb"><img src="major-moon.png" alt="Major Moon Private Piece" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Major Moon</div>
+                <div class="entry-meta">Private Piece · January</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- 2022 -->
       <div class="year-block" id="y2022">
         <div class="year-label">2022</div>
-        <div class="entries">
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="saguaro-panel">SAGUARO HOTEL PARTNERSHIP</div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="saguaro-panel" aria-hidden="true">
-                <img src="saguaro-one.png" alt="Saguaro Hotel Partnership" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">SAGUARO HOTEL PARTNERSHIP</div>
-                  <div class="techno-box-panel__details">
-                    <div>Palm Springs, 2022</div>
-                  </div>
-                </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">Saguaro Hotel Partnership</div>
+            <div class="entry-meta">Palm Springs · 2022</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Saguaro Hotel Partnership" data-work-meta="Palm Springs · 2022" data-work-image="saguaro-one.png" data-work-desc="Palm Springs, 2022.">
+              <div class="year-item__thumb"><img src="saguaro-one.png" alt="Saguaro Hotel Partnership" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Saguaro Hotel Partnership</div>
+                <div class="entry-meta">Palm Springs · 2022</div>
               </div>
             </div>
           </div>
-            <div class="entry-meta">
-              January
-              <div class="techno-box-panel" id="darkness-panel" aria-hidden="true">
-                <img src="her-two.png" alt="And The Darkness Burned Away artwork" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">"AND THE DARKNESS BURNED AWAY"</div>
-                  <div class="techno-box-panel__details">
-                    <div>Group Show</div>
-                  </div>
-                  <div class="vimeo-embed">
-                    <div style="padding:56.25% 0 0 0;position:relative;">
-                      <iframe src="https://player.vimeo.com/video/1121731717?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Inner World of a Woman"></iframe>
-                    </div>
-                  </div>
-                </div>
+        </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">"And the Darkness Burned Away"</div>
+            <div class="entry-meta">Group Show · January</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="And the Darkness Burned Away" data-work-meta="Group Show · January 2022" data-work-image="her-two.png" data-work-desc="Group Show, January 2022.">
+              <div class="year-item__thumb"><img src="her-two.png" alt="And The Darkness Burned Away artwork" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">"And the Darkness Burned Away"</div>
+                <div class="entry-meta">Group Show · January</div>
               </div>
             </div>
           </div>
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="sound-garden-panel">SOUND GARDEN GROUND FLOOR JUNCTION</div>
-            <div class="entry-meta">
-              July
-              <div class="techno-box-panel" id="sound-garden-panel" aria-hidden="true">
-                <img src="sound-garden.png" alt="Sound Garden Ground Floor Junction" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">SOUND GARDEN</div>
-                  <div class="techno-box-panel__details">
-                    <div>Ground Floor Junction</div>
-                    <div>July 2022</div>
-                  </div>
-                </div>
+        </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">Sound Garden</div>
+            <div class="entry-meta">Ground Floor Junction · July</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Sound Garden" data-work-meta="Ground Floor Junction · July 2022" data-work-image="sound-garden.png" data-work-desc="Ground Floor Junction, July 2022.">
+              <div class="year-item__thumb"><img src="sound-garden.png" alt="Sound Garden Ground Floor Junction" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Sound Garden</div>
+                <div class="entry-meta">Ground Floor Junction · July</div>
               </div>
             </div>
           </div>
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="nusi-quero-panel">NUSI QUERO COLLABORATION</div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="nusi-quero-panel" aria-hidden="true">
-                <img src="nusi_quero.png" alt="Nusi Quero Collaboration" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">NUSI QUERO COLLABORATION</div>
-                  <div class="techno-box-panel__details">
-                    <div>2022</div>
-                  </div>
-                </div>
+        </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">Nusi Quero Collaboration</div>
+            <div class="entry-meta">2022</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Nusi Quero Collaboration" data-work-meta="2022" data-work-image="nusi_quero.png" data-work-desc="Collaboration, 2022.">
+              <div class="year-item__thumb"><img src="nusi_quero.png" alt="Nusi Quero Collaboration" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Nusi Quero Collaboration</div>
+                <div class="entry-meta">2022</div>
               </div>
             </div>
           </div>
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="arrival-window-panel">MINNOW ARTS "ARRIVAL WINDOW" GROUP SHOW</div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="arrival-window-panel" aria-hidden="true">
-                <img src="arrival-window-6.png" alt="Arrival Window artwork" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">ARRIVAL WINDOW</div>
-                  <div class="techno-box-panel__details">
-                    <div>Minnow Arts Group Show</div>
-                  </div>
-                  <div class="audio-player" data-audio-player>
-                    <button class="audio-player__control" type="button" aria-label="Play" data-audio-toggle>
-                      ▶
-                    </button>
-                    <div class="audio-player__track" data-audio-track>
-                      <div class="audio-player__progress" data-audio-progress></div>
-                    </div>
-                    <span class="audio-player__time" data-audio-time>0:00</span>
-                    <audio class="audio-player__media" preload="none">
-                      <source src="day6_arrivalWindowaudio.wav" type="audio/wav" />
-                    </audio>
-                  </div>
+        </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">Minnow Arts "Arrival Window"</div>
+            <div class="entry-meta">Group Show</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Arrival Window" data-work-meta="Minnow Arts Group Show" data-work-image="arrival-window-6.png" data-work-desc="Minnow Arts Group Show.">
+              <div class="year-item__thumb"><img src="arrival-window-6.png" alt="Arrival Window artwork" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Minnow Arts "Arrival Window"</div>
+                <div class="entry-meta">Group Show</div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="day6_arrivalWindowaudio.wav" type="audio/wav" />
+                  </audio>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
 
       <!-- 2021 -->
       <div class="year-block" id="y2021">
         <div class="year-label">2021</div>
-        <div class="entries">
-          <div class="entry techno-box-entry">
-            <div class="entry-title-wrap">
-              <div class="entry-title techno-box-trigger" data-panel-target="her-hips-panel">"AND THE DARKNESS BURNED AWAY" GROUP SHOW</div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">"And the Darkness Burned Away"</div>
+            <div class="entry-meta">Group Show · December</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Her" data-work-meta="Immersive Sonic Installation" data-work-image="her-hips.png" data-work-desc="63 × 43 × 13 cm / 25 × 17 × 5.1 in. Coal slag, glass, argon, audio, the artist's clothing. Immersive sonic installation.">
+              <div class="year-item__thumb"><img src="her-hips.png" alt="Her Hips artwork" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Her</div>
+                <div class="entry-meta">63 × 43 × 13 cm &nbsp;&nbsp; 25 × 17 × 5.1 in · Coal slag, glass, argon, audio, the artist's clothing · Immersive sonic installation</div>
+              </div>
             </div>
-            <div class="entry-meta">December</div>
-            <div class="techno-box-panel" id="her-hips-panel" aria-hidden="true">
-              <img src="her-hips.png" alt="Her Hips artwork" class="techno-box-panel__image" />
-              <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">HER</div>
-                <div class="techno-box-panel__details">
-                  <div>63 × 43 × 13 cm &nbsp;&nbsp; 25 × 17 × 5.1 in</div>
-                  <div>COAL SLAG, GLASS, ARGON, AUDIO, THE ARTIST'S CLOTHING</div>
-                  <div>IMMERSIVE SONIC INSTALLATION</div>
-                </div>
-                <div class="techno-box-panel__spacer"></div>
-                <div class="techno-box-panel__details">
-                  <div>SHE</div>
-                  <div>00:10:10 ORIGINAL SONIC PIECE</div>
-                  <div>00:10:10 GUIDED SONIC MEDITATION</div>
-                </div>
-                <div class="techno-box-panel__spacer"></div>
-                <div class="techno-box-panel__details">
-                  <div>HER — IMMERSIVE SCENT</div>
-                  <div>MYRRH, LAVENDER, NEROLI, CEDARWOOD, OAKMOSS, OLIBANUM, PATCHOULI, VETIVER</div>
-                </div>
-                <div class="techno-box-panel__spacer"></div>
-                <div class="techno-box-panel__details">
-                  <div>"AND THE DARKNESS BURNED AWAY"</div>
-                  <div>SAUNTER HOME WELLNESS CLUB | JOSHUA TREE, CA</div>
-                  <div>December 8th, 2021 – January 4th, 2022</div>
-                </div>
-                <div class="techno-box-panel__spacer"></div>
-                <div class="techno-box-panel__details">
-                  <div>JAMES HAUNT, VERONICA GABRIEL-LABARRIE, DAVID IRWIN, HILARY SLOANE, SALVADOR</div>
-                  <div>Video courtesy of Brian Gonzalez</div>
-                </div>
-                <div class="techno-box-panel__spacer"></div>
-                <div class="white-rock-statement">
-                  <p>FROM ASH I BLOOM is an immersive sonic experience that explores the concept of emergence through stillness and activation of the power of femininity. Focus is illuminated through the light sculpture at the center of the room where argon light outlines a form reminiscent of a woman's hips. The work comments on the birth / rebirth life cycle, and offers a meditative initiation into a series of immersive sonic activations for attendees.</p>
-                  <p>Drawing on visuals from an other-world, the artist uses activations as a method of transportation for healing story telling, and experiential revelation.</p>
-                </div>
+            <div class="year-item" data-work-title="She" data-work-meta="Original Sonic Piece + Guided Sonic Meditation" data-work-image="" data-work-desc="00:10:10 original sonic piece. 00:10:10 guided sonic meditation.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">She</div>
+                <div class="entry-meta">00:10:10 original sonic piece · 00:10:10 guided sonic meditation</div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="Her — Immersive Scent" data-work-meta="Myrrh, Lavender, Neroli, Cedarwood, Oakmoss, Olibanum, Patchouli, Vetiver" data-work-image="" data-work-desc="Myrrh, lavender, neroli, cedarwood, oakmoss, olibanum, patchouli, vetiver.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">Her — Immersive Scent</div>
+                <div class="entry-meta">Myrrh, lavender, neroli, cedarwood, oakmoss, olibanum, patchouli, vetiver</div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="And the Darkness Burned Away" data-work-meta="Saunter Home Wellness Club · Joshua Tree, CA" data-work-image="" data-work-desc="Saunter Home Wellness Club, Joshua Tree, CA. December 8th, 2021 – January 4th, 2022. With James Haunt, Veronica Gabriel-Labarrie, David Irwin, Hilary Sloane, Salvador. Video courtesy of Brian Gonzalez. FROM ASH I BLOOM is an immersive sonic experience that explores the concept of emergence through stillness and activation of the power of femininity. Focus is illuminated through the light sculpture at the center of the room where argon light outlines a form reminiscent of a woman's hips. The work comments on the birth / rebirth life cycle, and offers a meditative initiation into a series of immersive sonic activations for attendees. Drawing on visuals from an other-world, the artist uses activations as a method of transportation for healing story telling, and experiential revelation.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">Saunter Home Wellness Club · Joshua Tree, CA</div>
+                <div class="entry-meta">December 8th, 2021 – January 4th, 2022 · James Haunt, Veronica Gabriel-Labarrie, David Irwin, Hilary Sloane, Salvador · Video courtesy of Brian Gonzalez</div>
               </div>
             </div>
           </div>
         </div>
+
       </div>
 
       <!-- 2020 -->
       <div class="year-block" id="y2020">
         <div class="year-label">2020</div>
-        <div class="entries">
-          <div class="entry">
+
+        <div class="year-group">
+          <div class="year-intro">
             <div class="entry-title">FE1</div>
-            <div class="entry-meta"></div>
+            <div class="entry-meta">2020</div>
           </div>
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="white-rock-panel">WHITE ROCK SERIES</div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="white-rock-panel" aria-hidden="true">
-                <div class="techno-box-panel__caption">
-
-                  <!-- TWO IMAGES SIDE BY SIDE -->
-                  <div class="techno-box-panel__pair">
-                    <div class="techno-box-panel__item">
-                      <img src="white-rock-series.jpg" alt="White Rock Series" class="techno-box-panel__image techno-box-panel__image--small" />
-                    </div>
-                    <div class="techno-box-panel__item">
-                      <img src="white-rock-seriess-lew.png" alt="White Rock Series — LEW" class="techno-box-panel__image techno-box-panel__image--small" />
-                    </div>
-                  </div>
-
-                  <!-- ARTWORK ENTRIES -->
-                  <div class="techno-box-panel__title">LEW</div>
-                  <div class="techno-box-panel__details">
-                    <div>20 × 16.5 in &nbsp;&nbsp;&nbsp; 50.8 × 41.9 cm</div>
-                    <div>OIL PAINT ON PANEL, HORSE HAIR, NICKEL, SILVER THREAD, STAINLESS STEEL NOSE RINGS</div>
-                  </div>
-
-                  <div class="techno-box-panel__spacer"></div>
-
-                  <div class="techno-box-panel__title">HELLO / THE EYE OF A HORSE</div>
-                  <div class="techno-box-panel__details">
-                    <div>16.5 × 20 in &nbsp;&nbsp;&nbsp; 41.9 × 50.8 cm</div>
-                    <div>OIL PAINT ON PANEL, RESIN, HORSE TAIL, NICKEL BEAD AND CONE, SILVER THREAD</div>
-                  </div>
-
-                  <div class="techno-box-panel__spacer"></div>
-
-                  <div class="techno-box-panel__title">HORSE TV</div>
-                  <div class="techno-box-panel__details">
-                    <div>20 × 24 in &nbsp;&nbsp;&nbsp; 50.8 × 60.9 cm</div>
-                    <div>OIL PAINT ON CANVAS, HORSE HAIR, NICKEL BEAD AND CONE, SILVER THREAD</div>
-                  </div>
-
-                  <div class="techno-box-panel__spacer"></div>
-
-                  <div class="techno-box-panel__title">THE CENTER</div>
-                  <div class="techno-box-panel__details">
-                    <div>17 × 10.5 in &nbsp;&nbsp;&nbsp; 43.2 × 26.7 cm</div>
-                    <div>STEEL, HORSE TAIL, NICKEL CONCHO'S, SILVER THREAD, JINGLE CONE, NICKEL BEAD</div>
-                  </div>
-
-                  <div class="techno-box-panel__spacer"></div>
-
-                  <div class="techno-box-panel__title">SILENCE</div>
-                  <div class="techno-box-panel__details">
-                    <div>38.3 × 6.3 in &nbsp;&nbsp;&nbsp; 97.2 × 16 cm</div>
-                    <div>RESIN, HORSE HAIR, STEEL, NICKEL CONCHO, SILVER THREAD</div>
-                  </div>
-
-                  <div class="techno-box-panel__spacer"></div>
-
-                  <div class="techno-box-panel__title">WHOLE</div>
-                  <div class="techno-box-panel__details">
-                    <div>40 × 40 × 2 in &nbsp;&nbsp;&nbsp; 101.6 × 101.6 × 2 cm</div>
-                    <div>NEON, HAND POLISHED STEEL, TRANSFORMER</div>
-                  </div>
-
-                  <div class="techno-box-panel__spacer"></div>
-                  <div class="techno-box-panel__spacer"></div>
-
-                  <!-- SERIES STATEMENT -->
-                  <div class="white-rock-statement">
-                    <p>THIS SERIES WAS MADE OVER THE COURSE OF THREE MONTHS OF VOLUNTEER WORK BY THE ARTIST AT A LOCAL HORSE RESCUE DURING THE PANDEMIC. EACH PIECE REPRESENTS AN INTEGRAL LESSON TAKEN FROM THE EXPERIENCE.</p>
-                    <p>TIME IN PROXIMITY IS THE CATALYST FOR ALL UNDERSTANDING. BEING TIMID WON'T WORK, BE GENTLE INSTEAD.</p>
-                    <p>HOLD YOUR BOUNDARIES ENERGETICALLY AND BE CERTAIN AND HONEST IN THE MOMENT THEY ARE TRESPASSED.</p>
-                    <p>OBSERVE BEFORE INTERJECTION.</p>
-                    <p>IDEATION OF CATASTROPHE KEEPS THE MIND SEDATED FROM REAL DANGER AND ENERGY LOW.</p>
-                    <p>BE. SIMPLY BE. STARE INTO THE CENTER OF A FLOWER OR WATCH SOMETHING UNTIL YOU FORGET WHERE THE BOUNDARY LIES BETWEEN YOU AND WHAT YOU ARE WATCHING.. YOU WILL COME OUT REFRESHED.</p>
-                  </div>
-
-                </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="FE1" data-work-meta="2020" data-work-image="" data-work-desc="FE1.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">FE1</div>
+                <div class="entry-meta">2020</div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">White Rock Series</div>
+            <div class="entry-meta">Made over three months of volunteer work at a local horse rescue during the pandemic</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="LEW" data-work-meta="20 × 16.5 in · 50.8 × 41.9 cm" data-work-image="white-rock-series.jpg" data-work-desc="Oil paint on panel, horse hair, nickel, silver thread, stainless steel nose rings.">
+              <div class="year-item__thumb"><img src="white-rock-series.jpg" alt="White Rock Series" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">LEW</div>
+                <div class="entry-meta">20 × 16.5 in &nbsp;&nbsp; 50.8 × 41.9 cm · Oil paint on panel, horse hair, nickel, silver thread, stainless steel nose rings</div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="Hello / The Eye of a Horse" data-work-meta="16.5 × 20 in · 41.9 × 50.8 cm" data-work-image="white-rock-seriess-lew.png" data-work-desc="Oil paint on panel, resin, horse tail, nickel bead and cone, silver thread.">
+              <div class="year-item__thumb"><img src="white-rock-seriess-lew.png" alt="White Rock Series — LEW" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Hello / The Eye of a Horse</div>
+                <div class="entry-meta">16.5 × 20 in &nbsp;&nbsp; 41.9 × 50.8 cm · Oil paint on panel, resin, horse tail, nickel bead and cone, silver thread</div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="Horse TV" data-work-meta="20 × 24 in · 50.8 × 60.9 cm" data-work-image="" data-work-desc="Oil paint on canvas, horse hair, nickel bead and cone, silver thread.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">Horse TV</div>
+                <div class="entry-meta">20 × 24 in &nbsp;&nbsp; 50.8 × 60.9 cm · Oil paint on canvas, horse hair, nickel bead and cone, silver thread</div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="The Center" data-work-meta="17 × 10.5 in · 43.2 × 26.7 cm" data-work-image="" data-work-desc="Steel, horse tail, nickel concho's, silver thread, jingle cone, nickel bead.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">The Center</div>
+                <div class="entry-meta">17 × 10.5 in &nbsp;&nbsp; 43.2 × 26.7 cm · Steel, horse tail, nickel concho's, silver thread, jingle cone, nickel bead</div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="Silence" data-work-meta="38.3 × 6.3 in · 97.2 × 16 cm" data-work-image="" data-work-desc="Resin, horse hair, steel, nickel concho, silver thread.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">Silence</div>
+                <div class="entry-meta">38.3 × 6.3 in &nbsp;&nbsp; 97.2 × 16 cm · Resin, horse hair, steel, nickel concho, silver thread</div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="Whole" data-work-meta="40 × 40 × 2 in · 101.6 × 101.6 × 2 cm" data-work-image="" data-work-desc="Neon, hand polished steel, transformer. This series was made over the course of three months of volunteer work by the artist at a local horse rescue during the pandemic. Each piece represents an integral lesson taken from the experience. Time in proximity is the catalyst for all understanding. Being timid won't work, be gentle instead. Hold your boundaries energetically and be certain and honest in the moment they are trespassed. Observe before interjection. Ideation of catastrophe keeps the mind sedated from real danger and energy low. Be. Simply be. Stare into the center of a flower or watch something until you forget where the boundary lies between you and what you are watching. You will come out refreshed.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">Whole</div>
+                <div class="entry-meta">40 × 40 × 2 in &nbsp;&nbsp; 101.6 × 101.6 × 2 cm · Neon, hand polished steel, transformer</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- 2019 -->
@@ -538,146 +846,132 @@
       <!-- 2018 -->
       <div class="year-block" id="y2018">
         <div class="year-label">2018</div>
-        <div class="entries">
-          <div class="entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="chrome-panel">"CHROME" GROUP SHOW</div>
-            <div class="entry-meta">
-              December
-              <div class="techno-box-panel" id="chrome-panel" aria-hidden="true">
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__pair">
-                    <div class="techno-box-panel__item">
-                      <img src="blood-box-web.png" alt="Blood Box / Spirit Vein artwork" class="techno-box-panel__image techno-box-panel__image--small" />
-                      <div class="techno-box-panel__title">BLOOD BOX / SPIRIT VEIN</div>
-                      <div class="techno-box-panel__details">
-                        <div>17 x 15.5 x 13 cm</div>
-                        <div>6.7 x 6.1 x 5.1 in</div>
-                        <div>GLASS, STEEL, NEON, PLEXI, EPOXY, 400ML ARTIST’S BLOOD</div>
-                      </div>
-                    </div>
-                    <div class="techno-box-panel__item">
-                      <img src="tumor-all-page.png" alt="The Most Pertinent Tumor artwork" class="techno-box-panel__image techno-box-panel__image--small" />
-                      <div class="techno-box-panel__title">THE MOST PERTINENT TUMOR</div>
-                      <div class="techno-box-panel__details">
-                        <div>63 x 43 x 13 cm</div>
-                        <div>25 x 17 x 5.1 in</div>
-                        <div>CLAY, CIGARETTES, PLASTIC, ROPE, CONTACT MICROPHONES</div>
-                        <div>INTERACTIVE SOUND INSTALLATION</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="audio-player" data-audio-player>
-                    <button class="audio-player__control" type="button" aria-label="Play" data-audio-toggle>
-                      ▶
-                    </button>
-                    <div class="audio-player__track" data-audio-track>
-                      <div class="audio-player__progress" data-audio-progress></div>
-                    </div>
-                    <span class="audio-player__time" data-audio-time>0:00</span>
-                    <audio class="audio-player__media" preload="none">
-                      <source src="chrome-audio.mp3" type="audio/mpeg" />
-                    </audio>
-                  </div>
-                </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">"Chrome" Group Show</div>
+            <div class="entry-meta">December</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Blood Box / Spirit Vein" data-work-meta="17 × 15.5 × 13 cm · 6.7 × 6.1 × 5.1 in" data-work-image="blood-box-web.png" data-work-desc="Glass, steel, neon, plexi, epoxy, 400ml artist's blood.">
+              <div class="year-item__thumb"><img src="blood-box-web.png" alt="Blood Box / Spirit Vein artwork" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Blood Box / Spirit Vein</div>
+                <div class="entry-meta">17 × 15.5 × 13 cm &nbsp;&nbsp; 6.7 × 6.1 × 5.1 in · Glass, steel, neon, plexi, epoxy, 400ml artist's blood</div>
               </div>
             </div>
-          </div>
-          <div class="entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="dissemination-panel">"HERE" GROUP SHOW</div>
-            <div class="entry-meta">
-              September
-              <div class="techno-box-panel" id="dissemination-panel" aria-hidden="true">
-                <img src="diseemination_web.png" alt="Dissemination I and II artwork" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">DISSEMINATION I</div>
-                  <div class="techno-box-panel__details">
-                    <div>45.2 x 27.9 x 10.7 cm</div>
-                    <div>17.8 x 11 x 4.2 in</div>
-                    <div>ACRYLIC, HYDRO-BEADS, STEEL, MISTING SYSTEM.</div>
-                  </div>
-                  <div class="techno-box-panel__spacer"></div>
-                  <div class="techno-box-panel__title">DISSEMINATION II</div>
-                  <div class="techno-box-panel__details">
-                    <div>45.2 x 27.9 x 10.7 cm</div>
-                    <div>17.8 x 11 x 4.2 in</div>
-                    <div>ACRYLIC, HYDRO-BEADS, STEEL, MISTING SYSTEM.</div>
-                  </div>
-                  <div class="audio-player" data-audio-player>
-                    <button class="audio-player__control" type="button" aria-label="Play" data-audio-toggle>
-                      ▶
-                    </button>
-                    <div class="audio-player__track" data-audio-track>
-                      <div class="audio-player__progress" data-audio-progress></div>
-                    </div>
-                    <span class="audio-player__time" data-audio-time>0:00</span>
-                    <audio class="audio-player__media" preload="none">
-                      <source src="dissemination-audio.mp3" type="audio/mpeg" />
-                    </audio>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="impact-panel">MOMENT OF IMPACT</div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="impact-panel" aria-hidden="true">
-                <img src="impact.png" alt="Moment of Impact artwork" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">IMPACT</div>
-                  <div class="techno-box-panel__details">
-                    <div>42 x 33.7 cm</div>
-                    <div>16.5 x 13.25 in</div>
-                    <div>WAX, CARD BOARD, FRAME, VARNISH</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="techno-box-art-panel">TECHNO BOX</div>
-            <div class="entry-meta">
-              <div class="techno-box-panel" id="techno-box-art-panel" aria-hidden="true">
-                <img src="techno-box-03_V2.png" alt="Techno Box artwork" class="techno-box-panel__image" />
-                <div class="techno-box-panel__caption">
-                  <div class="techno-box-panel__title">TECHNO BOX</div>
-                  <div class="techno-box-panel__details">
-                    <div>42 x 33.7 cm</div>
-                    <div>16.5 x 13.25 in</div>
-                    <div>STEEL, NEON, WOOD, BLACK ONYX, TOURMALINE, .925 SILVER, RESIN, RECYCLED GLASS, ACRYLIC PAINT, TRANSFORMER</div>
-                  </div>
-                  <div class="audio-player" data-audio-player>
-                    <button class="audio-player__control" type="button" aria-label="Play" data-audio-toggle>
-                      ▶
-                    </button>
-                    <div class="audio-player__track" data-audio-track>
-                      <div class="audio-player__progress" data-audio-progress></div>
-                    </div>
-                    <span class="audio-player__time" data-audio-time>0:00</span>
-                    <audio class="audio-player__media" preload="none">
-                      <source src="techno-box-audio.mp3" type="audio/mpeg" />
-                    </audio>
-                  </div>
+            <div class="year-item" data-work-title="The Most Pertinent Tumor" data-work-meta="63 × 43 × 13 cm · 25 × 17 × 5.1 in" data-work-image="tumor-all-page.png" data-work-desc="Clay, cigarettes, plastic, rope, contact microphones. Interactive sound installation.">
+              <div class="year-item__thumb"><img src="tumor-all-page.png" alt="The Most Pertinent Tumor artwork" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">The Most Pertinent Tumor</div>
+                <div class="entry-meta">63 × 43 × 13 cm &nbsp;&nbsp; 25 × 17 × 5.1 in · Clay, cigarettes, plastic, rope, contact microphones · Interactive sound installation</div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="chrome-audio.mp3" type="audio/mpeg" />
+                  </audio>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">"Here" Group Show</div>
+            <div class="entry-meta">September</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Dissemination I" data-work-meta="45.2 × 27.9 × 10.7 cm · 17.8 × 11 × 4.2 in" data-work-image="diseemination_web.png" data-work-desc="Acrylic, hydro-beads, steel, misting system.">
+              <div class="year-item__thumb"><img src="diseemination_web.png" alt="Dissemination I and II artwork" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Dissemination I</div>
+                <div class="entry-meta">45.2 × 27.9 × 10.7 cm &nbsp;&nbsp; 17.8 × 11 × 4.2 in · Acrylic, hydro-beads, steel, misting system</div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="Dissemination II" data-work-meta="45.2 × 27.9 × 10.7 cm · 17.8 × 11 × 4.2 in" data-work-image="" data-work-desc="Acrylic, hydro-beads, steel, misting system.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">Dissemination II</div>
+                <div class="entry-meta">45.2 × 27.9 × 10.7 cm &nbsp;&nbsp; 17.8 × 11 × 4.2 in · Acrylic, hydro-beads, steel, misting system</div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="dissemination-audio.mp3" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">Moment of Impact</div>
+            <div class="entry-meta">2018</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Impact" data-work-meta="42 × 33.7 cm · 16.5 × 13.25 in" data-work-image="impact.png" data-work-desc="Wax, card board, frame, varnish.">
+              <div class="year-item__thumb"><img src="impact.png" alt="Moment of Impact artwork" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Impact</div>
+                <div class="entry-meta">42 × 33.7 cm &nbsp;&nbsp; 16.5 × 13.25 in · Wax, card board, frame, varnish</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">Techno Box</div>
+            <div class="entry-meta">2018</div>
+          </div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Techno Box" data-work-meta="42 × 33.7 cm · 16.5 × 13.25 in" data-work-image="techno-box-03_V2.png" data-work-desc="Steel, neon, wood, black onyx, tourmaline, .925 silver, resin, recycled glass, acrylic paint, transformer.">
+              <div class="year-item__thumb"><img src="techno-box-03_V2.png" alt="Techno Box artwork" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Techno Box</div>
+                <div class="entry-meta">42 × 33.7 cm &nbsp;&nbsp; 16.5 × 13.25 in · Steel, neon, wood, black onyx, tourmaline, .925 silver, resin, recycled glass, acrylic paint, transformer</div>
+                <div class="year-item__audio">
+                  <button class="year-item__play" type="button" aria-label="Play" data-mini-audio-toggle>▶</button>
+                  <audio class="year-item__media" data-mini-audio-media preload="none">
+                    <source src="techno-box-audio.mp3" type="audio/mpeg" />
+                  </audio>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- VIDEO WORKS -->
       <div class="year-block" id="video-works">
         <div class="year-label">VIDEO WORKS</div>
-        <div class="entries">
-          <div class="entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="techno-box-video-panel">TECHNO BOX</div>
-            <div class="entry-meta"></div>
+
+        <div class="year-group">
+          <div class="year-intro">
+            <div class="entry-title">Video Works</div>
+            <div class="entry-meta">Selected video pieces</div>
           </div>
-          <div class="entry techno-box-entry">
-            <div class="entry-title techno-box-trigger" data-panel-target="lording-panel">LORDING</div>
-            <div class="entry-meta"></div>
+          <div class="year-items">
+            <div class="year-item" data-work-title="Techno Box" data-work-meta="Video" data-work-image="" data-work-desc="Techno Box video work.">
+              <div class="year-item__thumb"></div>
+              <div class="year-item__body">
+                <div class="entry-title">Techno Box</div>
+                <div class="entry-meta">Video</div>
+              </div>
+            </div>
+            <div class="year-item" data-work-title="Lording" data-work-meta="Video" data-work-image="lording-lamb.png" data-work-desc="Lording video work.">
+              <div class="year-item__thumb"><img src="lording-lamb.png" alt="Lording" /></div>
+              <div class="year-item__body">
+                <div class="entry-title">Lording</div>
+                <div class="entry-meta">Video</div>
+              </div>
+            </div>
           </div>
         </div>
+
       </div>
 
       <div class="video-panels">
@@ -725,6 +1019,101 @@
         </div>
       </div>
 
+      <!-- PERFORMANCE WORKS -->
+      <div class="year-block" id="performance">
+        <div class="year-label">PERFORMANCE WORKS</div>
+        <div class="perf-list">
+          <div class="perf-item">
+            <div class="perf-item__main">
+              <div class="entry-title">A Woman Saying No</div>
+              <div class="entry-meta">Sonic composition and performance · Dock11, Berlin</div>
+            </div>
+            <div class="perf-item__year">2026</div>
+          </div>
+          <div class="perf-item">
+            <div class="perf-item__main">
+              <div class="entry-title">Paper Magazine — Performance Series</div>
+              <div class="entry-meta">Written and performed in 5-day cycles</div>
+            </div>
+            <div class="perf-item__year">2024—25</div>
+          </div>
+          <div class="perf-item">
+            <div class="perf-item__main">
+              <div class="entry-title">Joshua Tree Music Festival</div>
+              <div class="entry-meta">Sonic performance · narration by JD Rudometkin</div>
+            </div>
+            <div class="perf-item__year">2024</div>
+          </div>
+          <div class="perf-item">
+            <div class="perf-item__main">
+              <div class="entry-title">Echo Park Rising</div>
+              <div class="entry-meta">Live performance · Los Angeles</div>
+            </div>
+            <div class="perf-item__year">2023</div>
+          </div>
+          <div class="perf-item">
+            <div class="perf-item__main">
+              <div class="entry-title">WFNM (We Found New Music)</div>
+              <div class="entry-meta">Live performance · Los Angeles</div>
+            </div>
+            <div class="perf-item__year">2022</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RESEARCH & FRAMEWORKS -->
+      <div class="year-block" id="research">
+        <div class="year-label">RESEARCH &amp; FRAMEWORKS</div>
+        <div class="research-list">
+          <div class="research-item">
+            <div class="entry-title">HARMONIC ENGINEERING</div>
+            <div class="entry-meta">Framework developed with Tom (Sundancer, West Point). Standing wave · container · driving force as regenerative system model.</div>
+          </div>
+          <div class="research-item">
+            <div class="entry-title">REGENERATIVE BLUEPRINT OF AN AI SYSTEM</div>
+            <div class="entry-meta">Response to Crawford &amp; Joler's Anatomy of an AI System. immer research event, Topanga 2025.</div>
+          </div>
+          <div class="research-item">
+            <div class="entry-title">PSYCHOGRAPHIC PROFILING &amp; ALGORITHMIC BIAS</div>
+            <div class="entry-meta">Research underlying Sonic Phenomena in III Parts. Embodied listening as counter-practice.</div>
+          </div>
+          <div class="research-item">
+            <div class="entry-title">immer FINANCIAL SYSTEMS</div>
+            <div class="entry-meta">Non-hierarchical financial infrastructure. NYU Leslie eLab Startup Bootcamp, accepted 2025.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRESS / CV -->
+      <div class="year-block" id="press">
+        <div class="year-label">PRESS</div>
+        <div class="press-list">
+          <a class="press-item" href="#" target="_blank" rel="noopener">
+            <div class="press-item__main">
+              <div class="entry-title">Paper Magazine</div>
+              <div class="entry-meta">Music collaboration feature, 2024–2025</div>
+            </div>
+            <span class="press-item__icon" aria-hidden="true">↗</span>
+          </a>
+          <a class="press-item" href="#" target="_blank" rel="noopener">
+            <div class="press-item__main">
+              <div class="entry-title">Driftwood Conversations</div>
+              <div class="entry-meta">Podcast with Hilary Sloane, Z107.7 Joshua Tree · June 2025</div>
+            </div>
+            <span class="press-item__icon" aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <div class="cv-label">CV</div>
+        <div class="cv-item">
+          <div class="cv-item__main">
+            <div class="entry-title">Katie Cline — Arressai CV 2026</div>
+            <div class="entry-meta">PDF · MFA, exhibitions, grants, research</div>
+          </div>
+          <a class="cv-download" href="katie-cline-arressai-cv-2026.pdf" download>Download</a>
+        </div>
+      </div>
+
       <!-- ALL SECTION -->
       <div class="year-block all-section" id="all">
         <div class="year-label">ALL</div>
@@ -736,6 +1125,17 @@
     </section>
 
   </main>
+
+  <!-- WORK DETAIL OVERLAY -->
+  <div id="workDetailOverlay" class="work-detail-overlay" aria-hidden="true">
+    <div class="work-detail-panel" role="dialog" aria-modal="true">
+      <button id="workDetailClose" class="work-detail-close" aria-label="Close">✕</button>
+      <div id="workDetailMedia" class="work-detail-panel__media"></div>
+      <div id="workDetailTitle" class="work-detail-panel__title"></div>
+      <div id="workDetailMeta" class="work-detail-panel__meta"></div>
+      <div id="workDetailDesc" class="work-detail-panel__desc"></div>
+    </div>
+  </div>
 
   <!-- BOTTOM RIGHT: Horse Video (transparent background) -->
   <div class="horse-video-wrap">
@@ -766,6 +1166,21 @@
       <div class="all-detail__desc" id="allDetailDesc"></div>
     </div>
   </div>
+
+  <!-- BOTTOM LEFT: Private collector-area entry point -->
+  <a href="collectors.html" class="private-star" aria-label="Private collector preview">
+    <svg viewBox="0 0 100 100" class="private-star__svg" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 3
+               C53 25 55 33 62 40
+               C70 47 80 49 97 51
+               C79 54 69 57 63 64
+               C56 72 54 80 51 98
+               C48 79 45 70 38 63
+               C31 56 21 54 2 50
+               C22 47 32 44 39 37
+               C46 30 47 21 50 3 Z" />
+    </svg>
+  </a>
 
   <script src="script.js"></script>
 </body>
