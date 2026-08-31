@@ -40,22 +40,24 @@ html, body.collectors-body {
 }
 
 .gate-logo {
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #111;
-  margin-bottom: 24px;
+  display: block;
+  height: 32px;
+  width: auto;
+  margin: 0 auto 24px;
 }
 
 .gate-title {
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.20em;
+  color: #111;
   margin-bottom: 10px;
 }
 
 .gate-desc {
-  font-size: 12px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
   color: #666;
   line-height: 1.6;
   margin-bottom: 24px;
@@ -119,19 +121,22 @@ html, body.collectors-body {
   border-bottom: 1px solid #eee;
 }
 .collector-header__logo {
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #888;
+  display: block;
+  height: 28px;
+  width: auto;
   margin-bottom: 12px;
 }
 .collector-header__title {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.20em;
+  color: #111;
   margin-bottom: 10px;
 }
 .collector-header__desc {
-  font-size: 13px;
+  font-size: 12px;
+  letter-spacing: 0.08em;
   color: #666;
   line-height: 1.6;
   max-width: 480px;
@@ -180,17 +185,22 @@ html, body.collectors-body {
 }
 
 .collector-item__title {
-  font-size: 14px;
-  font-weight: 600;
-  margin-bottom: 4px;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.20em;
+  color: #111;
+  margin-bottom: 6px;
 }
 .collector-item__meta {
   font-size: 11px;
+  letter-spacing: 0.08em;
   color: #888;
   margin-bottom: 8px;
 }
 .collector-item__desc {
   font-size: 12px;
+  letter-spacing: 0.02em;
   color: #444;
   line-height: 1.6;
 }
@@ -199,7 +209,8 @@ html, body.collectors-body {
   margin-top: 48px;
   padding-top: 20px;
   border-top: 1px solid #eee;
-  font-size: 11px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
   color: #999;
 }
 
