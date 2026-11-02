@@ -5,59 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Arressai — Katie Cline</title>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: Helvetica, "Helvetica Neue", Arial, sans-serif;
+    }
+    h1, h2, h3, .project-title, .work-title {
+      font-family: "DeFonte Plus", serif;
+    }
+    .site-footer {
+      position: relative !important;
+    }
+  </style>
 </head>
 <body>
-  <!-- Hero section with overlay header -->
+  <!-- Hero section - video background -->
   <section class="hero-section">
-    <img src="her-hips.png" alt="Hero" class="hero-image" />
-    
-    <!-- Overlay header -->
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="IWOAW-web-two.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay header on hero -->
     <header class="hero-header">
       <div class="hero-header-top">
         <a href="index.html" class="logo-link">
           <img src="logo-seven.png" alt="Arressai" class="site-logo" />
         </a>
         <nav class="main-nav">
-          <a href="index.html" class="nav-link">WORK</a>
+          <!-- <a href="fakenews.html" class="nav-link">fakenews</a> -->
+          <a href="work.html" class="nav-link">WORK</a>
           <a href="about.html" class="nav-link">ABOUT</a>
-          <a href="press-cv.html" class="nav-link">CV</a>
-          <a href="contact.html" class="nav-link">CONTACT</a>
+          <a href="https://docs.google.com/document/d/1aToLzN_V0GBQDImML55kt0zSI1UA-YPAeCizpxsZOrM/edit?usp=sharing" target="_blank" class="nav-link">CV</a>
+          <a href="mailto:contact@arressai.com" class="nav-link">CONTACT</a>
         </nav>
       </div>
     </header>
 
-    <!-- Left side: Listen -->
+    <!-- Listen button - left side -->
     <div class="hero-listen">
-      <button class="listen-btn" aria-label="Play audio">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2">
-          <circle cx="12" cy="12" r="10" />
-          <polygon points="10 8 16 12 10 16 10 8" />
+      <button class="listen-btn" id="audioToggle">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8 5v14l11-7z" fill="currentColor" />
         </svg>
         LISTEN
       </button>
+      <audio id="heroAudio">
+        <source src="HerHips-audio-cut.mp3" type="audio/wav" />
+      </audio>
     </div>
 
-    <!-- Right side: number indicator -->
+    <!-- Bottom right: number indicator -->
     <div class="hero-bottom-right">
-      <span class="hero-number">01 / 06</span>
+      <p class="hero-number"></p>
     </div>
   </section>
 
   <main class="main-content">
     <!-- Row-based layout: number | image | text -->
     <section class="projects-container">
-      <!-- Project 01 -->
+
+       <!-- Project 01 -->
       <div class="project-row">
         <div class="project-number">01</div>
         <div class="project-image">
-          <img src="her-hips.png" alt="Her [Inner World of A Woman]" />
+          <div class="project-image-wrapper">
+            <img src="bass-bath-thumbnail-2.jpg" alt="bassBAth 02" />
+            <button class="project-listen-btn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="currentColor" />
+              </svg>
+            </button>
+            <audio class="project-audio" src="bassBath_clipA 6-shanghai_Dissemination.wav"></audio>
+          </div>
         </div>
         <div class="project-text">
-          <h3 class="project-title">Inner World of A Woman</h3>
-          <div class="project-meta">2021</div>
-          <p class="project-description">Spatial Sonic Composition, Argon, Glass, Sculpture, Coal Slag, Electronics, The Artist's Clothes.</p>
-          <p class="project-dimensions">63 x 43 x 13 cm 25 x 17 x 5.1 in</p>
-          <p class="project-dimensions">Private collection</p>
+          <h3 class="project-title">BASSBATH 02</h3>
+          <div class="project-meta">2026</div>
+          <p class="project-description">Concrete, water, speakers, electronics</p>
+          <p class="project-dimensions">61 x 152 x 61 cm 24 x 60 x 24 in</p>
           <a href="work.html" class="project-link">VIEW MORE →</a>
         </div>
       </div>
@@ -66,28 +94,119 @@
       <div class="project-row">
         <div class="project-number">02</div>
         <div class="project-image">
-          <img src="bassbath-three.png" alt="bassBath 01" />
+          <div class="project-image-wrapper">
+            <img src="bass-bath-final-two.png" alt="bassBath 01" />
+            <button class="project-listen-btn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="currentColor" />
+              </svg>
+            </button>
+            <audio class="project-audio" src="Arressai_TeraHouse_Master-48khz_v2.mp3"></audio>
+          </div>
         </div>
         <div class="project-text">
           <h3 class="project-title">bassBath 01</h3>
           <div class="project-meta">2025</div>
-          <p class="project-description">Performance, Sonic Composition, Subwoofers, Speakers, Modular Synthesizer, Gong, Cement, Water, Electronics.</p>
+          <p class="project-description">Installation Work, Sonic Composition, Subwoofers, Speakers, Modular Synthesizer, Gong, Cement, Water, Electronics.</p>
           <p class="project-dimensions">Joshua Tree, CA</p>
           <a href="work.html" class="project-link">VIEW MORE →</a>
         </div>
       </div>
 
+
+
+      <!-- Project 06 -->
+      <div class="project-row">
+        <div class="project-number">06</div>
+        <div class="project-image">
+          <div class="project-image-wrapper">
+            <img src="immer-audio-part.png" alt="Immer" />
+            <button class="project-listen-btn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="currentColor" />
+              </svg>
+            </button>
+            <audio class="project-audio" src="T08-updated.wav"></audio>
+          </div>
+        </div>
+        <div class="project-text">
+          <h3 class="project-title">Immer</h3>
+          <div class="project-meta">2025</div>
+          <p class="project-description">Immersive Collaboratiive Event Series, Plant Sourced Sonic Composition, Live Performance.</p>
+          <a href="immer.html" class="project-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+
+      <!-- Project 07 -->
+      <div class="project-row">
+        <div class="project-number">07</div>
+        <div class="project-image">
+          <div class="project-image-wrapper">
+            <img src="coyote-mint-yes-four.png" alt="she could be shy" />
+            <button class="project-listen-btn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="currentColor" />
+              </svg>
+            </button>
+            <audio class="project-audio" src="T08-updated.wav"></audio>
+          </div>
+        </div>
+        <div class="project-text">
+          <h3 class="project-title">she could be shy</h3>
+          <div class="project-meta">2025</div>
+          <p class="project-description">Interactive Exhibit, Plant Sourced Sonic Composition, Proximity and Audio.</p>
+          <p class="project-dimensions">Sony Audio Institute, Brooklyn, NY</p>
+          <a href="work.html" class="project-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+
       <!-- Project 03 -->
       <div class="project-row">
         <div class="project-number">03</div>
         <div class="project-image">
-          <img src="attention-economy-thumbnail-3.png" alt="attentionEconomy" />
+          <div class="project-image-wrapper">
+            <img src="a-t.png" alt="attentionEconomy" />
+            <button class="project-listen-btn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="currentColor" />
+              </svg>
+            </button>
+            <audio class="project-audio" src="project-03.mp3"></audio>
+          </div>
         </div>
         <div class="project-text">
           <h3 class="project-title">attentionEconomy</h3>
           <div class="project-meta">2026</div>
           <p class="project-description">Wood, Mechanical Metronomes. </p>
-          <p class="project-dimensions">Variable dimensions</p>
+          <p class="project-dimensions">20 x 20 x 69 cm 8 x 8 x 27 in</p>
+          <p class="project-dimensions">Shanghai, CN</p>
+          <a href="work.html" class="project-link">VIEW MORE →</a>
+        </div>
+      </div>
+
+
+
+      <!-- Project 05 -->
+      <div class="project-row">
+        <div class="project-number">05</div>
+        <div class="project-image">
+          <div class="project-image-wrapper">
+            <img src="sense-tension-thumbnail-2.png" alt="senseTension" />
+            <button class="project-listen-btn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="currentColor" />
+              </svg>
+            </button>
+            <audio class="project-audio" src="project-05.mp3"></audio>
+          </div>
+        </div>
+        <div class="project-text">
+          <h3 class="project-title">senseTension</h3>
+          <div class="project-meta">2025</div>
+          <p class="project-description">Wood, speakers, steel, polystyrene, paint, screen, electronics.</p>
+          <p class="project-dimensions">200 x 140 x 110 cm 79 x 55 x 43 in</p>
           <p class="project-dimensions">Shanghai, CN</p>
           <a href="work.html" class="project-link">VIEW MORE →</a>
         </div>
@@ -97,62 +216,79 @@
       <div class="project-row">
         <div class="project-number">04</div>
         <div class="project-image">
-          <img src="bass-bath-thumbnail-2.jpg" alt="bassBAth 02" />
+          <div class="project-image-wrapper">
+            <img src="her-hips.png" alt="Her [Inner World of A Woman]" />
+            <button class="project-listen-btn">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="currentColor" />
+              </svg>
+            </button>
+            <audio class="project-audio" src="HerHips-audio-tab-final.mp3"></audio>
+          </div>
         </div>
         <div class="project-text">
-          <h3 class="project-title">BASSBATH 02</h3>
-          <div class="project-meta">2026</div>
-          <p class="project-description">Concrete, water, speakers, electronics</p>
-          <p class="project-dimensions">Variable dimensions</p>
+          <h3 class="project-title">Inner World of A Woman</h3>
+          <div class="project-meta">2021</div>
+          <p class="project-description">Spatial Sonic Composition, Argon, Glass, Sculpture, Coal Slag, Electronics, The Artist's Clothes.</p>
+          <p class="project-dimensions">63 x 43 x 13 cm 25 x 17 x 5.1 in</p>
+          <p class="project-dimensions">...And A Darkness Burned A Way Group Show curated by David Irwin</p>
           <a href="work.html" class="project-link">VIEW MORE →</a>
         </div>
       </div>
 
-      <!-- Project 05 -->
-      <div class="project-row">
-        <div class="project-number">05</div>
-        <div class="project-image">
-          <img src="sense-tension-thumbnail-2.png" alt="senseTension" />
-        </div>
-        <div class="project-text">
-          <h3 class="project-title">senseTension</h3>
-          <div class="project-meta">2025</div>
-          <p class="project-description">Wood, speakers, steel, polystyrene, paint, screen, electronics.</p>
-          <p class="project-dimensions">Variable dimensions</p>
-          <p class="project-dimensions">Shanghai, CN</p>
-          <a href="work.html" class="project-link">VIEW MORE →</a>
-        </div>
-      </div>
-
-      <!-- Project 06 -->
-      <div class="project-row">
-        <div class="project-number">06</div>
-        <div class="project-image">
-          <img src="immer-four.png" alt="Immer" />
-        </div>
-        <div class="project-text">
-          <h3 class="project-title">Immer</h3>
-          <div class="project-meta">2025</div>
-          <p class="project-description">Immersive Collaboratiive Event Series, Plant Sourced Sonic Composition, Live Performance.</p>
-          <a href="work.html" class="project-link">VIEW MORE →</a>
-        </div>
-      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>I use audio phenomena to make relationships between bodies, environments and technological systems perceivable.</p>
+    <p></p>
     <div class="footer-nav">
-      <a href="#">INSTAGRAM</a>
-      <a href="#">EMAIL</a>
-      <a href="collectors.html">CV</a>
+      <a href="https://www.instagram.com/arressai/" target="_blank">INSTAGRAM</a>
+      <a href="mailto:contact@arressai.com">EMAIL</a>
+      <a href="https://docs.google.com/document/d/1aToLzN_V0GBQDImML55kt0zSI1UA-YPAeCizpxsZOrM/edit?usp=sharing" target="_blank">CV</a>
     </div>
   </footer>
 
-  <a href="collectors.html" class="private-star">
+  <!-- <a href="collectors.html" class="private-star">
     <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
       <path d="M50,10 L60,40 L90,40 L68,58 L78,88 L50,70 L22,88 L32,58 L10,40 L40,40 Z" fill="currentColor" />
     </svg>
-  </a>
+  </a> -->
+
+  <script>
+    // Hero audio toggle
+    document.getElementById('audioToggle').addEventListener('click', function() {
+      const audio = document.getElementById('heroAudio');
+      const btn = this;
+      
+      if (audio.paused) {
+        audio.play();
+        btn.style.opacity = '0.7';
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        btn.style.opacity = '1';
+      }
+    });
+
+    // Project audio buttons
+    document.querySelectorAll('.project-listen-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const audio = this.nextElementSibling;
+        
+        // Stop all other audio
+        document.querySelectorAll('.project-audio').forEach(a => {
+          if (a !== audio) a.pause();
+        });
+        
+        if (audio.paused) {
+          audio.play();
+        } else {
+          audio.pause();
+          audio.currentTime = 0;
+        }
+      });
+    });
+  </script>
 </body>
 </html>

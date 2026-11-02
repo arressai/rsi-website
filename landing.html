@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sonic Gallery — Arressai</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Overlay header -->
+  <header class="hero-header">
+    <div class="hero-header-top">
+      <a href="index.html" class="logo-link">
+        <img src="logo-seven.png" alt="Arressai" class="site-logo" />
+      </a>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">WORK</a>
+        <a href="about.html" class="nav-link">ABOUT</a>
+        <a href="press-cv.html" class="nav-link">CV</a>
+        <a href="contact.html" class="nav-link">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content sonic-landing">
+    <section class="projects-container sonic-left">
+      <!-- <div class="sonic-header">
+        <h1 class="sonic-title">SONIC GALLERY</h1>
+        <p class="sonic-description">Interactive sound installation. Click falling objects to play sounds. Move your mouse up and down to modulate frequencies.</p>
+      </div> -->
+    </section>
+
+    <!-- Right side sonic gallery -->
+    <div class="sonic-gallery-right" id="sonicGallery">
+      <div class="sonic-item" data-sound="womansaying-no.wav" data-filter="lowpass">
+        <img src="pierogi.png" alt="Sonic Element 1" />
+      </div>
+      <div class="sonic-item" data-sound="sound-2.mp3" data-filter="lowpass">
+        <img src="pierogi.png" alt="Sonic Element 2" />
+      </div>
+      <div class="sonic-item" data-sound="sound-3.mp3" data-filter="highpass">
+        <img src="pierogi.png" alt="Sonic Element 3" />
+      </div>
+      <div class="sonic-item" data-sound="sound-4.mp3" data-filter="highpass">
+        <img src="pierogi.png" alt="Sonic Element 4" />
+      </div>
+      <div class="sonic-item" data-sound="sound-5.mp3" data-filter="lowpass">
+        <img src="pierogi.png" alt="Sonic Element 5" />
+      </div>
+      <div class="sonic-item" data-sound="sound-6.mp3" data-filter="highpass">
+        <img src="sun-four.png" alt="Sonic Element 6" />
+      </div>
+      <div class="sonic-item" data-sound="sound-1.mp3" data-filter="lowpass">
+        <img src="pierogi3.png" alt="Sonic Element 7" />
+      </div>
+      <div class="sonic-item" data-sound="sound-2.mp3" data-filter="highpass">
+        <img src="sun-four.png" alt="Sonic Element 8" />
+      </div>
+      <div class="sonic-item" data-sound="sound-3.mp3" data-filter="lowpass">
+        <img src="pierogi3.png" alt="Sonic Element 9" />
+      </div>
+      <div class="sonic-item" data-sound="sound-4.mp3" data-filter="highpass">
+        <img src="pierogi.png" alt="Sonic Element 10" />
+      </div>
+    </div>
+  </main>
+
+  <!-- Controls -->
+  <div class="sonic-controls-right">
+    <button id="toggleSound" class="sonic-btn">SOUND ON</button>
+    <button id="resetGallery" class="sonic-btn">RESET</button>
+  </div>
+
+  <footer class="site-footer">
+    <p>Sonic environments, installations and experiences exploring the intersection of sound, matter, and consciousness.</p>
+    <div class="footer-nav">
+      <a href="https://www.instagram.com/arressai/" target="_blank">INSTAGRAM</a>
+      <a href="#">EMAIL</a>
+      <a href="press-cv.html">CV</a>
+    </div>
+  </footer>
+
+  <a href="collectors.html" class="private-star">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50,10 L60,40 L90,40 L68,58 L78,88 L50,70 L22,88 L32,58 L10,40 L40,40 Z" fill="currentColor" />
+    </svg>
+  </a>
+
+  <script src="sonic-gallery.js"></script>
+</body>
+</html>
