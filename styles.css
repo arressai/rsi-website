@@ -104,7 +104,7 @@ body {
   position: relative;
   padding: 20px var(--site-gutter);
   z-index: 100;
-  order: 1;
+  order: 2;
   margin-top: auto;
 }
 
