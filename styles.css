@@ -59,7 +59,7 @@ body {
   padding: 20px var(--site-gutter);
   z-index: 100;
   width: 100%;
-  order: 1;
+  order: 0;
 }
 
 .hero-header-top {
@@ -102,9 +102,9 @@ body {
 /* Listen button - left side */
 .hero-listen {
   position: relative;
-  padding: 20px var(--site-gutter);
+  padding: 2px var(--site-gutter);
   z-index: 100;
-  order: 2;
+  order: 1;
   margin-top: auto;
 }
 
@@ -141,7 +141,6 @@ body {
   z-index: 100;
   text-align: right;
   order: 2;
-  margin-top: auto;
 }
 
 .hero-number {
